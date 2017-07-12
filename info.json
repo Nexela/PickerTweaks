@@ -1,0 +1,11 @@
+{
+  "name": "PickerTweaks",
+  "version": "2.8.1",
+  "factorio_version": "0.15",
+  "title": "Picker Tweaks",
+  "author": "Nexela",
+  "contact": "nexela@gmail.com",
+  "dependencies": ["base >= 0.15.18", "? PickerExtended", "? FactoReach", "? long-reach", "? long-reach-fix", "? Squeak Through"],
+  "homepage": "https://forums.factorio.com/viewtopic.php?f=93&t=14695",
+  "description": "Picker Tweaks, and Fixes"
+}
