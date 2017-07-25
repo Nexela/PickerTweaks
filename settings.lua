@@ -16,6 +16,14 @@ data:extend{
         --default factorio false
     },
     {
+        type = "bool-setting",
+        name = "picker-fireproof-construction-robots",
+        setting_type = "startup",
+        default_value = true,
+        order = "picker-a[bots]-c"
+        --default factorio false
+    },
+    {
         type = "int-setting",
         name = "picker-requester-paste-multiplier",
         setting_type = "startup",
@@ -30,7 +38,7 @@ data:extend{
         name = "picker-corpse-time",
         setting_type = "startup",
         default_value = 60 * 60,
-        minimum_value = 0,
+        minimum_value = 1,
         maximum_value = 60 * 60 * 60 * 60,
         order = "picker-m[corpse-time]-a"
         --default factorio 54000, 15 minutes
@@ -40,7 +48,7 @@ data:extend{
         name = "picker-player-corpse-time",
         setting_type = "startup",
         default_value = 60 * 60 * 15,
-        minimum_value = 0,
+        minimum_value = 1,
         maximum_value = 60 * 60 * 60 * 60,
         order = "picker-m[corpse-time]-b"
         --default factorio 54000, 15 minutes
@@ -203,4 +211,60 @@ data:extend{
         maximum_value = 100000,
         order = "picker-g[tiles]-b"
     },
+    {
+        type = "bool-setting",
+        name = "VirtualSignals-extra-numbers",
+        setting_type = "startup",
+        default_value = true,
+        order = "VirtualSignals-a-extras-0"
+    },
+    {
+        type = "bool-setting",
+        name = "VirtualSignals-extra-letters",
+        setting_type = "startup",
+        default_value = true,
+        order = "VirtualSignals-a-extras-a"
+    },
+    {
+        type = "bool-setting",
+        name = "VirtualSignals-power",
+        setting_type = "startup",
+        default_value = true,
+        order = "VirtualSignals-b-power"
+    },
+    -- {
+    -- type = "bool-setting",
+    -- name = "VirtualSignals-kana",
+    -- setting_type = "startup",
+    -- default_value = true,
+    -- order = "VirtualSignals-b-kana"
+    -- },
+    {
+        type = "bool-setting",
+        name = "picker-brighter-cell-background",
+        setting_type = "startup",
+        default_value = false,
+        order = "picker-brighter-cell-background"
+    },
+    {
+        type = "bool-setting",
+        name = "picker-fireproof-rail-signals",
+        setting_type = "startup",
+        default_value = true,
+        order = "picker-fireproof-rail-signals"
+    },
 }
+
+--Color Settings
+local colors = require("prototypes.signals.colors")
+for _, name in pairs(colors) do
+    data:extend{
+        {
+            type = "bool-setting",
+            name = "VirtualSignals-"..name,
+            setting_type = "startup",
+            default_value = (name ~= "blue" and true) or false,
+            order = "VirtualSignals-colors-"..name,
+        }
+    }
+end
