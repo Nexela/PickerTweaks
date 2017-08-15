@@ -253,6 +253,13 @@ data:extend{
         default_value = true,
         order = "picker-fireproof-rail-signals"
     },
+    {
+        type = "bool-setting",
+        name = "picker-generic-vehicle-grids",
+        setting_type = "startup",
+        default_value = false,
+        order = "picker-fireproof-vehicle-grids"
+    },
 }
 
 --Color Settings

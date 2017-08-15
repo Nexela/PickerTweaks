@@ -1,1 +1,1 @@
-
+require 'prototypes/vehicle-grids'
