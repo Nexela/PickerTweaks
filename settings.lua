@@ -23,16 +23,16 @@ data:extend{
         order = "picker-a[bots]-c"
         --default factorio false
     },
-    {
-        type = "int-setting",
-        name = "picker-requester-paste-multiplier",
-        setting_type = "startup",
-        default_value = 10,
-        maximum_value = 100,
-        minimum_value = 1,
-        order = "picker-c[requester-paste]-a"
-        --default factorio 2
-    },
+    -- {
+    --     type = "int-setting",
+    --     name = "picker-requester-paste-multiplier",
+    --     setting_type = "startup",
+    --     default_value = 10,
+    --     maximum_value = 100,
+    --     minimum_value = 1,
+    --     order = "picker-c[requester-paste]-a"
+    --     --default factorio 2
+    -- },
     {
         type = "int-setting",
         name = "picker-corpse-time",
