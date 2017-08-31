@@ -7,6 +7,7 @@ local utility_sprites = data.raw["utility-sprites"].default
 --Code and Gfx from "Ion's Tweaks: Less Unplugged", by "author": "KingIonTrueLove"
 if settings["picker-small-unplugged-icon"].value then
     utility_sprites.electricity_icon_unplugged.filename = "__PickerTweaks__/graphics/electricity-icon-unplugged.png"
+    utility_sprites.too_far_from_roboport_icon.filename = "__PickerTweaks__/graphics/too-far-from-roboport-icon.png"
 end
 
 -------------------------------------------------------------------------------

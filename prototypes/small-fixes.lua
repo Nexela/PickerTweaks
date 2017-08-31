@@ -6,15 +6,6 @@ local set = settings["startup"]
 local player = data.raw["player"]["player"]
 
 -------------------------------------------------------------------------------
---[[Fast Replace UG belts]]--
--------------------------------------------------------------------------------
-if set["picker-fast-replace-ug"].value then
-    for _, ug in pairs(data.raw["underground-belt"]) do
-        ug.fast_replaceable_group = "transport-belt"
-    end
-end
-
--------------------------------------------------------------------------------
 --[[Fix Bots]]--
 -------------------------------------------------------------------------------
 --Make construction and logistic robots unminable (no plucking them from the air)
@@ -80,9 +71,9 @@ end
 --Possibly defunct in .16 as multiplier is now time based?
 -- local value = set["picker-requester-paste-multiplier"].value or 10
 -- for _, recipe in pairs(data.raw["recipe"]) do
---     if not recipe.requester_paste_multiplier or recipe.requester_paste_multiplier == 10 then
---         recipe.requester_paste_multiplier = value
---     end
+-- if not recipe.requester_paste_multiplier or recipe.requester_paste_multiplier == 10 then
+-- recipe.requester_paste_multiplier = value
+-- end
 -- end
 
 -------------------------------------------------------------------------------
@@ -141,10 +132,13 @@ end
 -------------------------------------------------------------------------------
 if set["picker-hide-planners"].value then
     for _, item in pairs(data.raw["selection-tool"]) do
-        if data.raw.recipe[item.name] then
-            data.raw.recipe[item.name].hidden = true
+        if item.name ~= "dummy-selection-tool" then
+            if data.raw.recipe[item.name] then
+                data.raw.recipe[item.name].hidden = true
+            end
+            item.flags = {}
+            item.show_in_library = true
         end
-        item.flags = {"hidden"}
     end
     local rm = data.raw["item"]["resource-monitor"]
     if rm then

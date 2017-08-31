@@ -23,16 +23,6 @@ data:extend{
         order = "picker-a[bots]-c"
         --default factorio false
     },
-    -- {
-    --     type = "int-setting",
-    --     name = "picker-requester-paste-multiplier",
-    --     setting_type = "startup",
-    --     default_value = 10,
-    --     maximum_value = 100,
-    --     minimum_value = 1,
-    --     order = "picker-c[requester-paste]-a"
-    --     --default factorio 2
-    -- },
     {
         type = "int-setting",
         name = "picker-corpse-time",
@@ -67,7 +57,7 @@ data:extend{
         type = "double-setting",
         name = "picker-reacher-reach-distance",
         setting_type = "startup",
-        default_value = 30,
+        default_value = 6,
         maximum_value = 10000,
         minimum_value = 1,
         order = "picker-d[reacher]-a"
@@ -77,7 +67,7 @@ data:extend{
         type = "double-setting",
         name = "picker-reacher-build-distance",
         setting_type = "startup",
-        default_value = 30,
+        default_value = 6,
         maximum_value = 10000,
         minimum_value = 1,
         order = "picker-d[reacher]-b"
@@ -167,13 +157,6 @@ data:extend{
     },
     {
         type = "bool-setting",
-        name = "picker-fast-replace-ug",
-        setting_type = "startup",
-        default_value = false,
-        order = "picker-g[fast-replace]-b"
-    },
-    {
-        type = "bool-setting",
         name = "picker-smaller-gui-borders",
         setting_type = "startup",
         default_value = true,
@@ -232,13 +215,6 @@ data:extend{
         default_value = true,
         order = "VirtualSignals-b-power"
     },
-    -- {
-    -- type = "bool-setting",
-    -- name = "VirtualSignals-kana",
-    -- setting_type = "startup",
-    -- default_value = true,
-    -- order = "VirtualSignals-b-kana"
-    -- },
     {
         type = "bool-setting",
         name = "picker-brighter-cell-background",
