@@ -64,23 +64,9 @@ if set["picker-fireproof-rail-signals"].value then
 end
 
 -------------------------------------------------------------------------------
---[[Requester Paste Multiplier]]--
--------------------------------------------------------------------------------
---From small-fixes mod
---change requester paste multiplier for anything at default (10)
---Possibly defunct in .16 as multiplier is now time based?
--- local value = set["picker-requester-paste-multiplier"].value or 10
--- for _, recipe in pairs(data.raw["recipe"]) do
--- if not recipe.requester_paste_multiplier or recipe.requester_paste_multiplier == 10 then
--- recipe.requester_paste_multiplier = value
--- end
--- end
-
--------------------------------------------------------------------------------
 --[[Corpse-be-gone]]--
 -------------------------------------------------------------------------------
---Adjust coprse time to remove corpses quicker
---only change TTL if TTL is already at default.
+--Adjust coprse time to ris already at default.
 --Based off the stumps-be-gone mod
 local corpse_time = set["picker-corpse-time"].value
 for _, corpse in pairs(data.raw["corpse"]) do

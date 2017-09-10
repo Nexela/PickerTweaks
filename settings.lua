@@ -150,6 +150,13 @@ data:extend{
     },
     {
         type = "bool-setting",
+        name = "picker-disable-smoke",
+        setting_type = "startup",
+        default_value = false,
+        order = "picker-f[disable-smoke]-c"
+    },
+    {
+        type = "bool-setting",
         name = "picker-roundup",
         setting_type = "startup",
         default_value = true,
