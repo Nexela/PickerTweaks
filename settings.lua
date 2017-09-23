@@ -4,7 +4,7 @@ data:extend{
         name = "picker-unminable-construction-robots",
         setting_type = "startup",
         default_value = true,
-        order = "picker-a[bots]-a"
+        order = "[bots]-a"
         --default factorio false
     },
     {
@@ -12,7 +12,7 @@ data:extend{
         name = "picker-unminable-logistic-robots",
         setting_type = "startup",
         default_value = true,
-        order = "picker-a[bots]-b"
+        order = "[bots]-b"
         --default factorio false
     },
     {
@@ -20,7 +20,7 @@ data:extend{
         name = "picker-fireproof-construction-robots",
         setting_type = "startup",
         default_value = true,
-        order = "picker-a[bots]-c"
+        order = "[bots]-c"
         --default factorio false
     },
     {
@@ -30,7 +30,7 @@ data:extend{
         default_value = 60 * 60,
         minimum_value = 1,
         maximum_value = 60 * 60 * 60 * 60,
-        order = "picker-m[corpse-time]-a"
+        order = "[corpse-time]-a"
         --default factorio 54000, 15 minutes
     },
     {
@@ -40,7 +40,7 @@ data:extend{
         default_value = 60 * 60 * 15,
         minimum_value = 1,
         maximum_value = 60 * 60 * 60 * 60,
-        order = "picker-m[corpse-time]-b"
+        order = "[corpse-time]-b"
         --default factorio 54000, 15 minutes
     },
     {
@@ -50,7 +50,7 @@ data:extend{
         default_value = 60,
         minimum_value = 1,
         maxium_value = 600,
-        order = "picker-b[inv-size]-a"
+        order = "[inventory]-a"
         --default factorio 60
     },
     {
@@ -60,7 +60,7 @@ data:extend{
         default_value = 6,
         maximum_value = 10000,
         minimum_value = 1,
-        order = "picker-d[reacher]-a"
+        order = "[reacher]-a"
         --default factorio 6
     },
     {
@@ -70,7 +70,7 @@ data:extend{
         default_value = 6,
         maximum_value = 10000,
         minimum_value = 1,
-        order = "picker-d[reacher]-b"
+        order = "[reacher]-b"
         --default factorio 6
     },
     {
@@ -80,7 +80,7 @@ data:extend{
         default_value = 2.7,
         maximum_value = 10000,
         minimum_value = 1,
-        order = "picker-d[reacher]-c"
+        order = "[reacher]-c"
         --default factorio 2.7
     },
     {
@@ -90,7 +90,7 @@ data:extend{
         default_value = 6,
         maximum_value = 10000,
         minimum_value = 1,
-        order = "picker-d[reacher]-d"
+        order = "[reacher]-d"
         --default factorio 6
     },
     {
@@ -100,7 +100,7 @@ data:extend{
         default_value = 1,
         maximum_value = 100,
         minimum_value = 1,
-        order = "picker-d[reacher]-e"
+        order = "[reacher]-e"
         --default factorio 1
     },
     {
@@ -110,7 +110,7 @@ data:extend{
         default_value = 2,
         maximum_value = 100,
         minimum_value = 1,
-        order = "picker-d[reacher]-f"
+        order = "[reacher]-f"
         --default factorio 2
     },
     {
@@ -118,63 +118,77 @@ data:extend{
         name = "picker-hide-mod-names",
         setting_type = "startup",
         default_value = false,
-        order = "picker-e[hide-mod-names]-b"
+        order = "[hide-mod-names]-a"
     },
     {
         type = "bool-setting",
         name = "picker-hide-planners",
         setting_type = "startup",
         default_value = false,
-        order = "picker-e[hide-planners]-b"
+        order = "[hide-planners]-a"
     },
     {
         type = "bool-setting",
         name = "picker-brighter-lights-player",
         setting_type = "startup",
         default_value = false,
-        order = "picker-f[brighter-lights]-a"
+        order = "[brighter-lights]-a"
     },
     {
         type = "bool-setting",
         name = "picker-brighter-lights-vehicles",
         setting_type = "startup",
         default_value = false,
-        order = "picker-f[brighter-lights]-b"
+        order = "[brighter-lights]-b"
     },
     {
         type = "bool-setting",
         name = "picker-smaller-tree-box",
         setting_type = "startup",
         default_value = true,
-        order = "picker-f[smaller-tree-box]-c"
+        order = "[squeak-through]-a"
+    },
+    {
+        type = "bool-setting",
+        name = "picker-squeak-through",
+        setting_type = "startup",
+        default_value = true,
+        order = "[squeak-through]-b"
     },
     {
         type = "bool-setting",
         name = "picker-disable-smoke",
         setting_type = "startup",
         default_value = false,
-        order = "picker-f[disable-smoke]-c"
+        order = "[disable]-a"
+    },
+    {
+        type = "bool-setting",
+        name = "picker-disable-decorations",
+        setting_type = "startup",
+        default_value = false,
+        order = "[disable]-b"
     },
     {
         type = "bool-setting",
         name = "picker-roundup",
         setting_type = "startup",
         default_value = true,
-        order = "picker-f[roundup]-c"
+        order = "[roundup]-a"
     },
     {
         type = "bool-setting",
         name = "picker-smaller-gui-borders",
         setting_type = "startup",
         default_value = true,
-        order = "picker-g[small-borders]-b"
+        order = "[gui]-a"
     },
     {
         type = "bool-setting",
         name = "picker-small-unplugged-icon",
         setting_type = "startup",
         default_value = true,
-        order = "picker-g[small-power]-b"
+        order = "[smaller]-b"
     },
     {
         type = "string-setting",
@@ -182,7 +196,7 @@ data:extend{
         setting_type = "startup",
         default_value = "vanilla",
         allowed_values = {"vanilla", "green", "yellow", "purple", "blue"},
-        order = "picker-g[iondicators]-a"
+        order = "[iondicators]-a"
     },
     {
         type = "string-setting",
@@ -190,7 +204,7 @@ data:extend{
         setting_type = "startup",
         default_value = "vanilla",
         allowed_values = {"vanilla", "green", "yellow", "purple", "blue"},
-        order = "picker-g[iondicators]-b"
+        order = "[iondicators]-b"
     },
     {
         type = "int-setting",
@@ -199,49 +213,49 @@ data:extend{
         default_value = 100,
         minimum_value = 1,
         maximum_value = 100000,
-        order = "picker-g[tiles]-b"
+        order = "[stack]-a"
     },
     {
         type = "bool-setting",
         name = "VirtualSignals-extra-numbers",
         setting_type = "startup",
         default_value = true,
-        order = "VirtualSignals-a-extras-0"
+        order = "[VirtualSignals]-a-extras-0"
     },
     {
         type = "bool-setting",
         name = "VirtualSignals-extra-letters",
         setting_type = "startup",
         default_value = true,
-        order = "VirtualSignals-a-extras-a"
+        order = "[VirtualSignals]-a-extras-a"
     },
     {
         type = "bool-setting",
         name = "VirtualSignals-power",
         setting_type = "startup",
         default_value = true,
-        order = "VirtualSignals-b-power"
+        order = "[VirtualSignals]-b-power"
     },
     {
         type = "bool-setting",
         name = "picker-brighter-cell-background",
         setting_type = "startup",
         default_value = false,
-        order = "picker-brighter-cell-background"
+        order = "[gui]-b"
     },
     {
         type = "bool-setting",
         name = "picker-fireproof-rail-signals",
         setting_type = "startup",
         default_value = true,
-        order = "picker-fireproof-rail-signals"
+        order = "[rails]-a"
     },
     {
         type = "bool-setting",
         name = "picker-generic-vehicle-grids",
         setting_type = "startup",
         default_value = false,
-        order = "picker-fireproof-vehicle-grids"
+        order = "[vehicles]-a"
     },
 }
 
