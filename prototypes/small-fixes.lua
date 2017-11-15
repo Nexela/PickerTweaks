@@ -160,7 +160,7 @@ if set["picker-hide-mod-names"].value then
     style.mod_list_label_style =
     {
         type = "label_style",
-        parent = "label_style",
+        parent = style.mod_list_label and "label" or "label_style",
         font = "null-font",
         font_color={r=1.0, g=0.0, b=1.0},
         minimal_width = 0,
@@ -171,7 +171,6 @@ if set["picker-hide-mod-names"].value then
         height = 0
     }
 end
-
 -------------------------------------------------------------------------------
 --[[Brighten Cells]]--
 -------------------------------------------------------------------------------

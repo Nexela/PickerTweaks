@@ -3,7 +3,7 @@
 --------------------------------------------------------------------------------
 local Area = require("stdlib/area/area")
 
-local prototype_type_gap_requirements =
+local gap_requirements =
 {
 	["solar-panel"]             = 0.25,
 	["accumulator"]             = 0.25,
@@ -68,10 +68,10 @@ local function adjust_coordinate_to_form_gap(coordinate, required_gap)
 	return coordinate
 end
 
--- Checks all existing prototypes listed in prototype_type_gap_requirements and
+-- Checks all existing prototypes listed in gap_requirements and
 -- reduces their collision box to make a gap large enough to walk though if it is not already.
 local function adjust_collision_boxes()
-	for prototype_type, required_gap in pairs(prototype_type_gap_requirements) do
+	for prototype_type, required_gap in pairs(gap_requirements) do
 		for _, prototype in pairs(data.raw[prototype_type]) do
 			-- If the prototype is not excluded and has a collision box then resize it.
 			if  prototype.collision_box and Area(prototype.collision_box):size() > 0 then

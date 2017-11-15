@@ -16,28 +16,36 @@ end
 --Tweak by "Ion's UI Tweaks: Smaller Borders", by "KingIonTrueLove"
 if settings["picker-smaller-gui-borders"].value then
     local style = data.raw["gui-style"].default
-    style.switch_quickbar_button_style.default_graphical_set.monolith_image.width = 20
-    style.switch_quickbar_button_style.default_graphical_set.monolith_image.height = 21
-    style.switch_quickbar_button_style.hovered_graphical_set.monolith_image.width = 20
-    style.switch_quickbar_button_style.hovered_graphical_set.monolith_image.height = 21
-    style.switch_quickbar_button_style.hovered_graphical_set.monolith_image.x = 25
-    style.switch_quickbar_button_style.clicked_graphical_set.monolith_image.width = 20
-    style.switch_quickbar_button_style.clicked_graphical_set.monolith_image.height = 21
-    style.switch_quickbar_button_style.clicked_graphical_set.monolith_image.x = 25
 
-    style.flow_style.horizontal_spacing = 2
-    style.flow_style.vertical_spacing = 4
+    local quickbar = style.switch_quickbar_button_style
+    quickbar.default_graphical_set.monolith_image.width = 20
+    quickbar.default_graphical_set.monolith_image.height = 21
+    quickbar.hovered_graphical_set.monolith_image.width = 20
+    quickbar.hovered_graphical_set.monolith_image.height = 21
+    quickbar.hovered_graphical_set.monolith_image.x = 25
+    quickbar.clicked_graphical_set.monolith_image.width = 20
+    quickbar.clicked_graphical_set.monolith_image.height = 21
+    quickbar.clicked_graphical_set.monolith_image.x = 25
 
-    style.frame_style.top_padding = 2
-    style.frame_style.right_padding = 3
-    style.frame_style.bottom_padding = 3
-    style.frame_style.left_padding = 2
+    local qbf = style.quick_bar_frame_style
+    qbf.top_padding = 2
 
-    style.quick_bar_frame_style.top_padding = 2
-    style.tool_bar_frame_style.top_padding = 2
+    local tbf = style.tool_bar_frame_style
+    tbf.top_padding = 2
 
-    style.scroll_pane_style.horizontal_scroll_bar_spacing = 5
-    style.scroll_pane_style.vertical_scroll_bar_spacing = 3
+    local flow = style.flow_style
+    flow.horizontal_spacing = 2
+    flow.vertical_spacing = 4
+
+    local frame = style.frame_style
+    frame.top_padding = 2
+    frame.right_padding = 3
+    frame.bottom_padding = 3
+    frame.left_padding = 2
+
+    local scroll = style.scroll_pane_style
+    scroll.horizontal_scroll_bar_spacing = 5
+    scroll.vertical_scroll_bar_spacing = 3
 end
 
 -------------------------------------------------------------------------------
