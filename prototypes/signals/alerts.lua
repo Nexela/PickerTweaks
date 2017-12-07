@@ -28,6 +28,7 @@ for _, name in pairs(names) do
         name = name,
         localised_name = {"signals-alerts."..name},
         icon = "__PickerTweaks__/graphics/icons/signal/alerts/"..name..".png",
+        icon_size = 32,
         subgroup = subgroup,
         order = "more-signals-a-alerts["..name.."]",
     }

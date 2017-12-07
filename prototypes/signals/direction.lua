@@ -17,11 +17,14 @@ for _, color in pairs(colors) do
                 {
                     {
                         icon = "__base__/graphics/icons/signal/signal_"..color..".png",
+                        icon_size = 32,
                     },
                     {
                         icon = "__PickerTweaks__/graphics/icons/signal/directions/"..name..".png",
+                        icon_size = 32,
                     }
                 },
+                icon_size = 32,
                 subgroup = subgroup,
                 order = "more-signals-d-directions["..color.."]-["..name.."]",
             }

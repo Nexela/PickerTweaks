@@ -41,9 +41,11 @@ for _, signal in pairs (colors) do
             {
                 {
                     icon = "__base__/graphics/icons/signal/signal_grey.png",
+                    icon_size = 32,
                     tint = signal.color
                 }
             },
+            icon_size = 32,
             subgroup = "virtual-signal-color",
             order = "d[colors]-["..signal.name.."]"
         }

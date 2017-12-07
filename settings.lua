@@ -113,13 +113,13 @@ data:extend{
         order = "[reacher]-f"
         --default factorio 2
     },
-    {
-        type = "bool-setting",
-        name = "picker-hide-mod-names",
-        setting_type = "startup",
-        default_value = false,
-        order = "[hide-mod-names]-a"
-    },
+    -- {
+    --     type = "bool-setting",
+    --     name = "picker-hide-mod-names",
+    --     setting_type = "startup",
+    --     default_value = false,
+    --     order = "[hide-mod-names]-a"
+    -- },
     {
         type = "bool-setting",
         name = "picker-hide-planners",
@@ -180,7 +180,7 @@ data:extend{
         type = "bool-setting",
         name = "picker-smaller-gui-borders",
         setting_type = "startup",
-        default_value = true,
+        default_value = false,
         order = "[gui]-a"
     },
     {

@@ -17,7 +17,7 @@ end
 if settings["picker-smaller-gui-borders"].value then
     local style = data.raw["gui-style"].default
 
-    local quickbar = style.switch_quickbar_button_style
+    local quickbar = style.switch_quickbar_button
     quickbar.default_graphical_set.monolith_image.width = 20
     quickbar.default_graphical_set.monolith_image.height = 21
     quickbar.hovered_graphical_set.monolith_image.width = 20
@@ -27,23 +27,23 @@ if settings["picker-smaller-gui-borders"].value then
     quickbar.clicked_graphical_set.monolith_image.height = 21
     quickbar.clicked_graphical_set.monolith_image.x = 25
 
-    local qbf = style.quick_bar_frame_style
+    local qbf = style.quick_bar_frame
     qbf.top_padding = 2
 
-    local tbf = style.tool_bar_frame_style
+    local tbf = style.tool_bar_frame
     tbf.top_padding = 2
 
-    local flow = style.flow_style
+    local flow = style.flow
     flow.horizontal_spacing = 2
     flow.vertical_spacing = 4
 
-    local frame = style.frame_style
+    local frame = style.frame
     frame.top_padding = 2
     frame.right_padding = 3
     frame.bottom_padding = 3
     frame.left_padding = 2
 
-    local scroll = style.scroll_pane_style
+    local scroll = style.scroll_pane
     scroll.horizontal_scroll_bar_spacing = 5
     scroll.vertical_scroll_bar_spacing = 3
 end

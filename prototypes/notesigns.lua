@@ -1,4 +1,5 @@
 --Notes and signs for stickynotes
+local Data = require("stdlib.data.data")
 
 local tech = {
     type = "technology",
@@ -46,6 +47,7 @@ local sticky_note_item = {
     type = "item",
     name = "sticky-note",
     icon = "__PickerExtended__/graphics/sticky-note.png",
+    icon_size = 32,
     flags = {"goes-to-quickbar"},
     subgroup = "terrain",
     order = "y",
@@ -55,6 +57,7 @@ local sticky_note_item = {
 
 local sticky_note = Data.duplicate( "container", "wooden-chest", "sticky-note", true)
 sticky_note.icon = "__PickerExtended__/graphics/sticky-note.png"
+sticky_note.icon_size = 32
 sticky_note.picture =
 {
     filename = "__PickerExtended__/graphics/sticky-note.png",
@@ -98,6 +101,7 @@ local sticky_sign_item = {
 
 local sticky_sign = Data.duplicate( "container", "wooden-chest", "sticky-sign", true )
 sticky_sign.icon = "__PickerExtended__/graphics/sign-icon.png"
+sticky_sign.icon_size = 32
 sticky_sign.picture =
 {
     filename = "__PickerExtended__/graphics/sign.png",

@@ -45,11 +45,14 @@ for _, color in pairs(colors) do
                     icons = {
                         {
                             icon = "__base__/graphics/icons/signal/signal_"..color..".png",
+                            icon_size = 32,
                         },
                         {
                             icon = "__PickerTweaks__/graphics/icons/signal/numbers/signal_"..number..".png",
+                            icon_size = 32,
                         }
                     },
+                    icon_size = 32,
                     subgroup = subgroup,
                     order = "more-signals-c["..color.."]-a-["..number.."]"
                 }
@@ -64,11 +67,14 @@ for _, color in pairs(colors) do
                     icons = {
                         {
                             icon = "__base__/graphics/icons/signal/signal_"..color..".png",
+                            icon_size = 32,
                         },
                         {
                             icon = "__PickerTweaks__/graphics/icons/signal/letters/signal_"..letter..".png",
+                            icon_size = 32,
                         }
                     },
+                    icon_size = 32,
                     subgroup = subgroup,
                     order = "more-signals-c["..color.."]-b-["..letter.."]"
                 }
@@ -83,11 +89,14 @@ for _, color in pairs(colors) do
                 icons = {
                     {
                         icon = "__base__/graphics/icons/signal/signal_"..color..".png",
+                        icon_size = 32,
                     },
                     {
                         icon = "__PickerTweaks__/graphics/icons/signal/more/"..name..".png",
+                        icon_size = 32,
                     }
                 },
+                icon_size = 32,
                 subgroup = subgroup,
                 order = "more-signals-c["..color.."]-c-["..name.."]"
             }
