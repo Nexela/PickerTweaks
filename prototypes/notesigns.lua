@@ -1,3 +1,5 @@
+local Data = require("stdlib/data/data")
+
 --Notes and signs for stickynotes
 local tech = {
     type = "technology",
