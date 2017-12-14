@@ -94,83 +94,45 @@ player.loot_pickup_distance = set["picker-reacher-loot-pickup-distance"].value
 player.item_pickup_distance = set["picker-reacher-item-pickup-distance"].value
 
 -------------------------------------------------------------------------------
---[[Smaller Tree Boxes]]--
--------------------------------------------------------------------------------
-if set["picker-smaller-tree-box"].value then
-    for _, stupid_tree in pairs(data.raw["tree"]) do
-        if stupid_tree.collision_box then
-            stupid_tree.collision_box = {{-0.05, -0.05}, {0.05, 0.05}}
-        end
-    end
-end
-
--------------------------------------------------------------------------------
 --[[Roundup]]--
 -------------------------------------------------------------------------------
 if set["picker-roundup"].value then
     if data.raw["tile"]["concrete"] then
         data.raw["tile"]["concrete"].decorative_removal_probability = 1
     end
+    if data.raw["tile"]["stone-path"] then
+        data.raw["tile"]["stone-path"].decorative_removal_probability = 1
+    end
 end
 
 -------------------------------------------------------------------------------
 --[[Hide Planners]]--
 -------------------------------------------------------------------------------
-if set["picker-hide-planners"].value then
+if set["picker-add-planners-library"] and set["picker-add-planners-library"].value then
     for _, item in pairs(data.raw["selection-tool"]) do
         if item.name ~= "dummy-selection-tool" then
-            if data.raw.recipe[item.name] then
-                data.raw.recipe[item.name].hidden = true
-            end
-            item.flags = {}
             item.show_in_library = true
         end
     end
-    local rm = data.raw["item"]["resource-monitor"]
-    if rm then
-        rm.flags = {"hidden"}
-        data.raw.recipe[rm.name].hidden = true
-    end
+    -- local rm = data.raw["item"]["resource-monitor"]
+    -- if rm then
+    --     rm.flags = {"hidden"}
+    --     data.raw.recipe[rm.name].hidden = true
+    -- end
 end
 
 -------------------------------------------------------------------------------
 --[[Tile stack sizes]]--
 -------------------------------------------------------------------------------
 local tile_size = set["picker-tile-stack"].value
-for _, tile in pairs(data.raw.item) do
-    local is_tile = tile.place_as_tile
-    if is_tile and tile.stack_size < tile_size then
-        tile.stack_size = tile_size
+if tile_size > 0 then
+    for _, tile in pairs(data.raw.item) do
+        local is_tile = tile.place_as_tile
+        if is_tile and tile.stack_size < tile_size then
+            tile.stack_size = tile_size
+        end
     end
 end
-
--------------------------------------------------------------------------------
---[[Hide Mode Names]]--
--------------------------------------------------------------------------------
--- if set["picker-hide-mod-names"].value then
---     data:extend{
---         {
---             type = "font",
---             name = "null-font",
---             from = "default-bold",
---             size = 0
---         }
---     }
-
---     style.mod_list_label_style =
---     {
---         type = "label_style",
---         parent = style.mod_list_label and "label" or "label_style",
---         font = "null-font",
---         font_color={r=1.0, g=0.0, b=1.0},
---         minimal_width = 0,
---         maximal_width = 1,
---         minimal_height = 0,
---         maximal_height = 1,
---         width = 0,
---         height = 0
---     }
--- end
 
 -------------------------------------------------------------------------------
 --[[Brighten Cells]]--

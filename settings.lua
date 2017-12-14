@@ -1,4 +1,4 @@
-data:extend{
+data:extend {
     {
         type = "bool-setting",
         name = "picker-unminable-construction-robots",
@@ -113,18 +113,11 @@ data:extend{
         order = "[reacher]-f"
         --default factorio 2
     },
-    -- {
-    --     type = "bool-setting",
-    --     name = "picker-hide-mod-names",
-    --     setting_type = "startup",
-    --     default_value = false,
-    --     order = "[hide-mod-names]-a"
-    -- },
     {
         type = "bool-setting",
-        name = "picker-hide-planners",
+        name = "picker-add-planners-library",
         setting_type = "startup",
-        default_value = false,
+        default_value = true,
         order = "[hide-planners]-a"
     },
     {
@@ -152,7 +145,7 @@ data:extend{
         type = "bool-setting",
         name = "picker-squeak-through",
         setting_type = "startup",
-        default_value = true,
+        default_value = false,
         order = "[squeak-through]-b"
     },
     {
@@ -210,8 +203,8 @@ data:extend{
         type = "int-setting",
         name = "picker-tile-stack",
         setting_type = "startup",
-        default_value = 100,
-        minimum_value = 1,
+        default_value = 0,
+        minimum_value = 0,
         maximum_value = 100000,
         order = "[stack]-a"
     },
@@ -257,18 +250,25 @@ data:extend{
         default_value = false,
         order = "[vehicles]-a"
     },
+    {
+        type = "bool-setting",
+        name = "picker-enable-sign-entities",
+        setting_type = "startup",
+        default_value = false,
+        order = "[sticky-notes]-a"
+    }
 }
 
 --Color Settings
 local colors = require("prototypes.signals.colors")
 for _, name in pairs(colors) do
-    data:extend{
+    data:extend {
         {
             type = "bool-setting",
-            name = "VirtualSignals-"..name,
+            name = "VirtualSignals-" .. name,
             setting_type = "startup",
             default_value = (name ~= "blue" and true) or false,
-            order = "VirtualSignals-colors-"..name,
+            order = "VirtualSignals-colors-" .. name
         }
     }
 end
