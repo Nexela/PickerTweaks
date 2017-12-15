@@ -172,7 +172,7 @@ if set["picker-brighter-cell-background"].value then
         }
     end
 
-    local filter_bg = style["slot_with_filter_button_style"]
+    local filter_bg = style["slot_with_filter_button"]
     filter_bg.default_graphical_set = bluebuttongraphcialset("default")
     filter_bg.hovered_graphical_set = bluebuttongraphcialset("hovered")
     filter_bg.clicked_graphical_set = bluebuttongraphcialset("clicked")
