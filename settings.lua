@@ -256,6 +256,13 @@ data:extend {
         setting_type = "startup",
         default_value = false,
         order = "[sticky-notes]-a"
+    },
+    {
+        type = "bool-setting",
+        name = "picker-better-lamp-colors",
+        setting_type = "startup",
+        default_value = true,
+        order = "VirtualSignals-better-lamp-colors"
     }
 }
 

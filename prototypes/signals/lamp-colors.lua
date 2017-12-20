@@ -6,6 +6,10 @@ local function RGB(r,g,b)
     return {r = r/255, g = g/255, b = b/255}
 end
 
+if not settings.startup["picker-better-lamp-colors"].value then
+    return
+end
+
 local colors =
 {
     {type="virtual", name="signal-white", color = RGB(255, 255, 255)},
