@@ -1,7 +1,10 @@
 local Data = require("stdlib/data/data")
 
---Notes and signs for stickynotes
-local tech = {
+if not settings.startup["picker-enable-sign-entities"].value then
+    return
+end
+
+Data {
     type = "technology",
     name = "sticky-notes",
     icon = "__PickerTweaks__/graphics/sticky-notes.png",
@@ -26,8 +29,7 @@ local tech = {
     order = "k-c"
 }
 
---[[Sticky Note]]
-local sticky_note_recipe = {
+Data {
     type = "recipe",
     name = "sticky-note",
     enabled = false,
@@ -39,7 +41,7 @@ local sticky_note_recipe = {
     result_count = 1
 }
 
-local sticky_note_item = {
+Data {
     type = "item",
     name = "sticky-note",
     icon = "__PickerTweaks__/graphics/sticky-note.png",
@@ -51,23 +53,22 @@ local sticky_note_item = {
     stack_size = 100
 }
 
-local sticky_note = Data.duplicate("container", "wooden-chest", "sticky-note", true)
-sticky_note.icon = "__PickerTweaks__/graphics/sticky-note.png"
-sticky_note.icon_size = 32
-sticky_note.picture = {
-    filename = "__PickerTweaks__/graphics/sticky-note.png",
-    priority = "extra-high",
-    width = 32,
-    height = 32,
-    shift = {0, 0}
+Data("wooden-chest", "container"):copy("sticky-note"):set_fields {
+    icon = "__PickerTweaks__/graphics/sticky-note.png",
+    icon_size = 32,
+    picture = {
+        filename = "__PickerTweaks__/graphics/sticky-note.png",
+        priority = "extra-high",
+        width = 32,
+        height = 32,
+        shift = {0, 0}
+    },
+    collision_box = {{-0.1, -0.1}, {0.1, 0.1}},
+    selection_box = {{-0.5, -0.5}, {0.5, 0.5}},
+    inventory_size = 0
 }
---sticky_note.collision_mask = "floor-layer"
-sticky_note.collision_box = {{-0.1, -0.1}, {0.1, 0.1}}
-sticky_note.selection_box = {{-0.5, -0.5}, {0.5, 0.5}}
-sticky_note.inventory_size = 0
 
---[[Sticky Sign]]
-local sticky_sign_recipe = {
+Data {
     type = "recipe",
     name = "sticky-sign",
     enabled = false,
@@ -79,7 +80,7 @@ local sticky_sign_recipe = {
     result_count = 1
 }
 
-local sticky_sign_item = {
+Data {
     type = "item",
     name = "sticky-sign",
     icon = "__PickerTweaks__/graphics/sign-icon.png",
@@ -90,20 +91,17 @@ local sticky_sign_item = {
     stack_size = 100
 }
 
-local sticky_sign = Data.duplicate("container", "wooden-chest", "sticky-sign", true)
-sticky_sign.icon = "__PickerTweaks__/graphics/sign-icon.png"
-sticky_sign.icon_size = 32
-sticky_sign.picture = {
-    filename = "__PickerTweaks__/graphics/sign.png",
-    priority = "extra-high",
-    width = 64,
-    height = 64,
-    shift = {0.5, -0.5}
+Data("wooden-chest", "container"):copy("sticky-sign"):set_fields {
+    icon = "__PickerTweaks__/graphics/sign-icon.png",
+    icon_size = 32,
+    picture = {
+        filename = "__PickerTweaks__/graphics/sign.png",
+        priority = "extra-high",
+        width = 64,
+        height = 64,
+        shift = {0.5, -0.5}
+    },
+    collision_box = {{-0.1, -0.1}, {0.1, 0.1}},
+    selection_box = {{-0.5, -0.5}, {0.5, 0.5}},
+    inventory_size = 0
 }
-sticky_sign.collision_box = {{-0.1, -0.1}, {0.1, 0.1}}
-sticky_sign.selection_box = {{-0.5, -0.5}, {0.5, 0.5}}
-sticky_sign.inventory_size = 0
-
-if settings.startup["picker-enable-sign-entities"].value then
-    data:extend {sticky_sign_recipe, sticky_sign_item, sticky_sign, tech, sticky_note_recipe, sticky_note_item, sticky_note}
-end
