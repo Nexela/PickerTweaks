@@ -263,6 +263,13 @@ data:extend {
         setting_type = "startup",
         default_value = true,
         order = "VirtualSignals-better-lamp-colors"
+    },
+    {
+        type = 'bool-setting',
+        name = 'picker-cheat-recipes',
+        setting_type = 'startup',
+        default_value = false,
+        order = 'picker[startup][cheats]'
     }
 }
 
