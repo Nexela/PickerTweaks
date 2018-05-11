@@ -23,3 +23,15 @@ Data {
     group = 'picker-cheats',
     order = 'c'
 }
+Data {
+    type = 'item-subgroup',
+    name = 'picker-cheats-research',
+    group = 'picker-cheats',
+    order = 'd'
+}
+Data {
+    type = 'item-subgroup',
+    name = 'picker-cheats-modules',
+    group = 'picker-cheats',
+    order = 'e'
+}

@@ -15,14 +15,19 @@ local function create_pole(from, name, gfx, order, distance, supply)
         icon = icon_path .. gfx
     }
     pole.pictures.filename = entity_path .. gfx
+    pole.minable.mining_time = 0.5
 
     local item = Item(from, 'item'):copy(name)
     item:set_field('icon', icon_path .. gfx):subgroup_order('picker-cheats-power', order)
     if recipes then
         item:Flags():remove('hidden')
-        Recipe(from):copy(name):set_fields{
+        Recipe {
+            name = name,
+            type = 'recipe',
             enabled = true,
             hidden = false,
+            ingredients = {},
+            result = name
         }
     else
         item:Flags():add('hidden')

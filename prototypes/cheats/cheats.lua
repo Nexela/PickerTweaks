@@ -1,3 +1,7 @@
 require('prototypes/cheats/item-groups')
 require('prototypes/cheats/infinity-containers')
 require('prototypes/cheats/power')
+require('prototypes/cheats/lab')
+require('prototypes/cheats/beacon')
+require('prototypes/cheats/modules')
+require('prototypes/cheats/radar')

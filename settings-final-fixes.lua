@@ -9,7 +9,7 @@
 if data.raw["bool-setting"] then
     for _, v in pairs(data.raw["bool-setting"]) do
         if v.default_value ~= nil then
-            v.localised_description = {"picker-extra-settings-info.merge", {"mod-setting-description." .. v.name}, "\n\n" .. "Default: " .. tostring(v.default_value) .. "."}
+            v.localised_description = {"picker-extra-settings-info.merge", {"mod-setting-description." .. v.name}, "\n\n" .. "Default: " .. tostring(v.default_value)}
         end
     end
 end
@@ -27,7 +27,7 @@ for _,s in pairs{"int-setting", "double-setting"} do
                 table.insert(t, "Maximum: " .. v.maximum_value)
             end
             if #t then
-                v.localised_description = {"picker-extra-settings-info.merge", {"mod-setting-description." .. v.name}, "\n\n" .. table.concat(t, ", ") .. "."}
+                v.localised_description = {"picker-extra-settings-info.merge", {"mod-setting-description." .. v.name}, "\n\n" .. table.concat(t, ", ")}
             end
         end
     end
@@ -44,7 +44,7 @@ if data.raw["string-setting"] then
             table.insert(t, "Disallows blank")
         end
         if #t then
-            v.localised_description = {"picker-extra-settings-info.merge", {"mod-setting-description." .. v.name}, "\n\n" .. table.concat(t, ", ") .. "."}
+            v.localised_description = {"picker-extra-settings-info.merge", {"mod-setting-description." .. v.name}, "\n\n" .. table.concat(t, ", ")}
         end
     end
 end

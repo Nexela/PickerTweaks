@@ -113,13 +113,13 @@ data:extend {
         order = "[reacher]-f"
         --default factorio 2
     },
-    {
-        type = "bool-setting",
-        name = "picker-add-planners-library",
-        setting_type = "startup",
-        default_value = true,
-        order = "[hide-planners]-a"
-    },
+    -- {
+    --     type = "bool-setting",
+    --     name = "picker-add-planners-library",
+    --     setting_type = "startup",
+    --     default_value = true,
+    --     order = "[hide-planners]-a"
+    -- },
     {
         type = "bool-setting",
         name = "picker-brighter-lights-player",

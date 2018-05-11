@@ -31,7 +31,7 @@ entity:copy('picker-infinity-buffer-chest'):set_fields {
         icon = path .. 'infinity-buffer-chest.png'
     }.picture.filename = path .. 'infinity-buffer-chest.png'
 
-local item = Item('infinity-chest', 'item'):copy('picker-infinity-chest'):set_fields{stack_size = 100}:subgroup_order('picker-cheats-containers', 'a')
+local item = Item('infinity-chest', 'item'):copy('picker-infinity-chest'):set_fields {stack_size = 100}:subgroup_order('picker-cheats-containers', 'a')
 if settings.startup['picker-cheat-recipes'].value then
     item:remove_flag('hidden')
 end
@@ -56,5 +56,4 @@ if settings.startup['picker-cheat-recipes'].value then
     chest:copy('picker-infinity-storage-chest'):set_fields {order = 'd'}
     chest:copy('picker-infinity-buffer-chest'):set_fields {order = 'e'}
     chest:copy('picker-infinity-requester-chest'):set_fields {order = 'f'}
-
 end
