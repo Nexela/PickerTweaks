@@ -122,17 +122,24 @@ data:extend {
     -- },
     {
         type = "bool-setting",
+        name = "picker-enhanced-lights",
+        setting_type = "startup",
+        default_value = true,
+        order = "[brighter-lights]-a"
+    },
+    {
+        type = "bool-setting",
         name = "picker-brighter-lights-player",
         setting_type = "startup",
         default_value = false,
-        order = "[brighter-lights]-a"
+        order = "[brighter-lights]-b"
     },
     {
         type = "bool-setting",
         name = "picker-brighter-lights-vehicles",
         setting_type = "startup",
         default_value = false,
-        order = "[brighter-lights]-b"
+        order = "[brighter-lights]-c"
     },
     {
         type = "bool-setting",

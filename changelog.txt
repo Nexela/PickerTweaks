@@ -1,21 +1,24 @@
 ---------------------------------------------------------------------------------------------------
 Version: 1.0.2
 Date: ??????
+  Features:
+    - Added EnhancedFlashlight.
   Bugfixes:
-    - Fixed alert icon size
+    - Fixed brighter lights.
+    - Fixed alert icon size.
 ---------------------------------------------------------------------------------------------------
 Version: 1.0.0
 Date: ??????
   Features:
-    - Prototype Tweaks
-    - Custom tile stack sizes
-    - Better color lamps
-    - More virtual signal icons
-    - Iondicators
-    - Smokeless
-    - Generic Vehicle Grids
-    - Squeak Through
-    - Remove decorations
-    - Small Fixes
-    - Entities for Picker Notes
-    - Picker Reacher (adjust prototype reach distances)
+    - Prototype Tweaks.
+    - Custom tile stack sizes.
+    - Better color lamps.
+    - More virtual signal icons.
+    - Iondicators.
+    - Smokeless.
+    - Generic Vehicle Grids.
+    - Squeak Through.
+    - Remove decorations.
+    - Small Fixes.
+    - Entities for Picker Notes.
+    - Picker Reacher (adjust prototype reach distances).
