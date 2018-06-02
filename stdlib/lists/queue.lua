@@ -14,7 +14,7 @@ local table = require('stdlib/utils/table')
 local t_size = table.size
 
 local Is = require('stdlib/utils/is')
-local Inspect = require('stdlib/utils/vendor/inspect')
+local Inspect = require('stdlib/vendor/inspect')
 
 --- Constructs a new Queue object.
 -- @return (<span class="types">@{Queue}</span>) a new, empty queue
@@ -178,7 +178,7 @@ Queue.iter_last = Queue.rpairs
 
 Queue._mt = {
     __pairs = Queue.pairs,
-    __ipairs = Queue.ipairs,
+    __ipairs = Queue.pairs,
     __len = Queue.count,
     -- Allows queue[3] to return the item at queue.objects[3]
     __index = function(self, k)
