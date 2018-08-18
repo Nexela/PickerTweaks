@@ -8,5 +8,3 @@ require("prototypes.signals.math")
 require("prototypes.signals.punctuation")
 require("prototypes.signals.currency")
 --require(prototypes.kana)
-
-require('prototypes/cheats/cheats')
