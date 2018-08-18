@@ -25,7 +25,7 @@
     You should have received a copy of the GNU General Public License
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
 ]]
-local Area = require("stdlib/area/area")
+local Area = require("__stdlib__/area/area")
 
 local gap_requirements = {
     ["solar-panel"] = 0.25,

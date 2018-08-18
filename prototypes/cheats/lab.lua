@@ -1,6 +1,6 @@
-local Entity = require('stdlib/data/entity')
-local Item = require('stdlib/data/item')
-local Recipe = require('stdlib/data/recipe')
+local Entity = require('__stdlib__/data/entity')
+local Item = require('__stdlib__/data/item')
+local Recipe = require('__stdlib__/data/recipe')
 
 local recipes = settings.startup['picker-cheat-recipes'].value
 
@@ -20,8 +20,8 @@ lab.on_animation = {
 }
 lab.off_animation = lab.on_animation
 lab.module_specification.module_slots = 7
-lab.energy_source = require('prototypes/cheats/energy-source')
-lab.energy_usage = '0W'
+lab.energy_source = {type = 'void'}
+lab.energy_usage = '1W'
 
 local item = Item('lab', 'item'):copy('picker-cheats-lab')
 item:set_field('icon', icon_path):subgroup_order('picker-cheats-research', 'a')

@@ -19,7 +19,7 @@ OUT_FILES := $(SED_FILES:%=$(OUTPUT_DIR)/%)
 SED_EXPRS := -e 's/{{_MOD_NAME_}}/$(PACKAGE_NAME)/g'
 SED_EXPRS += -e 's/{{_VERSION_}}/$(VERSION_STRING)/g'
 
-all: clean tag package
+all: clean package
 
 package-copy: $(PKG_DIRS) $(PKG_FILES)
 	@mkdir -p $(OUTPUT_DIR)

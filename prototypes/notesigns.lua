@@ -1,4 +1,4 @@
-local Data = require("stdlib/data/data")
+local Data = require("__stdlib__/data/data")
 
 if not settings.startup["picker-enable-sign-entities"].value then
     return

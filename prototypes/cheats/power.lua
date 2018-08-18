@@ -1,6 +1,6 @@
-local Entity = require('stdlib/data/entity')
-local Item = require('stdlib/data/item')
-local Recipe = require('stdlib/data/recipe')
+local Entity = require('__stdlib__/data/entity')
+local Item = require('__stdlib__/data/item')
+local Recipe = require('__stdlib__/data/recipe')
 
 local recipes = settings.startup['picker-cheat-recipes'].value
 

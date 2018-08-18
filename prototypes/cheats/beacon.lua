@@ -1,6 +1,6 @@
-local Entity = require('stdlib/data/entity')
-local Item = require('stdlib/data/item')
-local Recipe = require('stdlib/data/recipe')
+local Entity = require('__stdlib__/data/entity')
+local Item = require('__stdlib__/data/item')
+local Recipe = require('__stdlib__/data/recipe')
 
 local recipes = settings.startup['picker-cheat-recipes'].value
 
@@ -13,7 +13,7 @@ beacon.icon = icon_path
 beacon.allowed_effects = {'consumption', 'speed', 'pollution', 'productivity'}
 beacon.minable.mining_time = 0.5
 beacon.supply_area_distance = 64
-beacon.energy_source = require('prototypes/cheats/energy-source')
+beacon.energy_source = {type = 'void'}
 beacon.energy_usage = '1J'
 beacon.distribution_effectivity = 0.5
 beacon.module_specification = {
