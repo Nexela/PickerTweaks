@@ -56,10 +56,8 @@ local gap_requirements = {
 if not settings.startup["picker-smaller-tree-box"].value then
     gap_requirements.tree = 0.42
 end
- --
 
--------------------------------------------------------------------------------
---[[Smaller Tree Boxes]] -------------------------------------------------------------------------------
+--(( Smaller Tree Collision ))--
 if settings.startup["picker-smaller-tree-box"].value then
     for _, stupid_tree in pairs(data.raw["tree"]) do
         if stupid_tree.collision_box then

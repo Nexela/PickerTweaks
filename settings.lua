@@ -217,27 +217,6 @@ data:extend {
     },
     {
         type = "bool-setting",
-        name = "VirtualSignals-extra-numbers",
-        setting_type = "startup",
-        default_value = true,
-        order = "[VirtualSignals]-a-extras-0"
-    },
-    {
-        type = "bool-setting",
-        name = "VirtualSignals-extra-letters",
-        setting_type = "startup",
-        default_value = true,
-        order = "[VirtualSignals]-a-extras-a"
-    },
-    {
-        type = "bool-setting",
-        name = "VirtualSignals-power",
-        setting_type = "startup",
-        default_value = true,
-        order = "[VirtualSignals]-b-power"
-    },
-    {
-        type = "bool-setting",
         name = "picker-brighter-cell-background",
         setting_type = "startup",
         default_value = false,
@@ -256,33 +235,5 @@ data:extend {
         setting_type = "startup",
         default_value = false,
         order = "[vehicles]-a"
-    },
-    {
-        type = "bool-setting",
-        name = "picker-enable-sign-entities",
-        setting_type = "startup",
-        default_value = false,
-        order = "[sticky-notes]-a"
-    },
-    {
-        type = "bool-setting",
-        name = "picker-better-lamp-colors",
-        setting_type = "startup",
-        default_value = true,
-        order = "VirtualSignals-better-lamp-colors"
     }
 }
-
---Color Settings
-local colors = require("prototypes.signals.colors")
-for _, name in pairs(colors) do
-    data:extend {
-        {
-            type = "bool-setting",
-            name = "VirtualSignals-" .. name,
-            setting_type = "startup",
-            default_value = (name ~= "blue" and true) or false,
-            order = "VirtualSignals-colors-" .. name
-        }
-    }
-end
