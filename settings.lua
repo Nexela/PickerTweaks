@@ -235,5 +235,12 @@ data:extend {
         setting_type = "startup",
         default_value = false,
         order = "[vehicles]-a"
+    },
+    {
+        type = "bool-setting",
+        name = "picker-replace-wood",
+        setting_type = "startup",
+        default_value = false,
+        order = "[Recipes]-a"
     }
 }

@@ -3,6 +3,11 @@ Version: 2.0.0
 Date: ??????
   Features:
     - Split some modules into their own mods.
+    - Add woodless recipes.
+  Removal:
+    - Better Color Lamps (PickerSignals).
+    - More Virtual Signals (PickerSignals).
+    - Entities for Notes (PickerNotes).
 ---------------------------------------------------------------------------------------------------
 Version: 1.0.2
 Date: ??????
