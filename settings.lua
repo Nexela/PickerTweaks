@@ -242,5 +242,12 @@ data:extend {
         setting_type = "startup",
         default_value = false,
         order = "[Recipes]-a"
+    },
+    {
+        type = "bool-setting",
+        name = "picker-no-artillery-reveal",
+        setting_type = "startup",
+        default_value = false,
+        order = "[Recipes]-a"
     }
 }
