@@ -1,6 +1,7 @@
 local Data = require('__stdlib__/data/data')
 local Recipe = require('__stdlib__/data/recipe')
 
+--(( Woodless Recipes ))--
 if settings.startup["picker-replace-wood"] then
     Data('small-electric-pole', 'item'):remove_fields('fuel_category', 'fuel_value')
     Recipe('small-electric-pole'):replace_ingredient('wood', 'iron-plate')
@@ -10,3 +11,4 @@ if settings.startup["picker-replace-wood"] then
     Recipe('combat-shotgun'):replace_ingredient('wood', 'coal')
     Recipe('steel-axe'):replace_ingredient('wood', 'iron-plate')
 end
+--))

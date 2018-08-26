@@ -2,8 +2,12 @@
 Version: 2.0.0
 Date: ??????
   Features:
-    - Split some modules into their own mods.
-    - Add woodless recipes.
+    - Add Show Bots on map option.
+    - Add woodless recipes option.
+    - Add fireproof rolling stock option.
+    - Add legacy belt fast replace option.
+    - Add artillery map reveal option.
+    - Add free circuit wires option.
   Removal:
     - Better Color Lamps (PickerSignals).
     - More Virtual Signals (PickerSignals).
