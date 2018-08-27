@@ -1,4 +1,4 @@
-local Data = require('__stdlib__/data/data')
+local Data = require('__stdlib__/stdlib/data/data')
 
 --Adjust coprse time to ris already at default.
 --Based off the stumps-be-gone mod

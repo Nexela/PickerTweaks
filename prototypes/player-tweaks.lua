@@ -1,4 +1,4 @@
-local Data = require('__stdlib__/data/data')
+local Data = require('__stdlib__/stdlib/data/data')
 local player = Data('player', 'player')
 
 --(( Starting inventory size ))--

@@ -275,8 +275,14 @@ data:extend {
         type = 'bool-setting',
         name = 'picker-show-bots-on-map',
         setting_type = 'startup',
-        default_value = true,
+        default_value = false,
+        order = '[Recipes]-a'
+    },
+    {
+        type = 'bool-setting',
+        name = 'picker-clean-tree-burning',
+        setting_type = 'startup',
+        default_value = false,
         order = '[Recipes]-a'
     }
 }
-

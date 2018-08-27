@@ -2,7 +2,7 @@
 --Also removes them from going to the quickbar.
 --Based on Small-Fixes by Choumiko
 
-local Data = require('__stdlib__/data/data')
+local Data = require('__stdlib__/stdlib/data/data')
 
 local types = {'construction-robot', 'logistic-robot'}
 local bots = {}

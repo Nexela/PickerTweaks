@@ -1,4 +1,4 @@
-local Recipe = require('__stdlib__/data/recipe')
+local Recipe = require('__stdlib__/stdlib/data/recipe')
 
 --(( Free Wires ))--
 -- "name": "freenetworkwiring",
