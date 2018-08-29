@@ -284,5 +284,12 @@ data:extend {
         setting_type = 'startup',
         default_value = false,
         order = '[Recipes]-a'
-    }
+    },
+    {
+        type = 'bool-setting',
+        name = 'picker-realistic-reactor-glow',
+        setting_type = 'startup',
+        default_value = true,
+        order = '[Entities]-a'
+    },
 }

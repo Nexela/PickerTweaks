@@ -2,6 +2,7 @@
 Version: 2.0.0
 Date: ??????
   Features:
+    - Add Realistic Reactor Glow.
     - Add Smaller Request Proxy image.
     - Add Show Bots on map option.
     - Add woodless recipes option.
