@@ -117,7 +117,7 @@ data:extend {
     --     type = "bool-setting",
     --     name = "picker-add-planners-library",
     --     setting_type = "startup",
-    --     default_value = true,
+    --     default_value = false,
     --     order = "[hide-planners]-a"
     -- },
     {
@@ -175,6 +175,13 @@ data:extend {
         setting_type = 'startup',
         default_value = true,
         order = '[roundup]-a'
+    },
+    {
+        type = 'bool-setting',
+        name = 'picker-roundup-resources',
+        setting_type = 'startup',
+        default_value = false,
+        order = '[roundup]-b'
     },
     {
         type = 'bool-setting',

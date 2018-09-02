@@ -36,6 +36,13 @@ if settings.startup['picker-roundup'].value then
     }
 
     for _, tile in pairs(tiles) do
-        Data(tile, 'tile').decorative_removal_prbability = 1
+        Data(tile, 'tile').decorative_removal_probability = 1
+    end
+end
+
+if settings.startup['picker-roundup-resources'].value then
+    for _, tree in Data:pairs(data.raw.resource) do
+        tree.tree_removal_probability = 1
+        tree.tree_removal_max_distance = 1000000
     end
 end
