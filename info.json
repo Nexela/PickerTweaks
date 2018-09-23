@@ -5,7 +5,7 @@
   "title": "Picker Tweaks",
   "author": "Nexela",
   "contact": "nexela@gmail.com",
-  "dependencies": ["base >= 0.16.0", "stdlib >= 1.0.0", "PickerAtheneum >= 1.0.0", "(?) FactoReach", "(?) long-reach", "(?) long-reach-fix", "(?) Squeak Through"],
+  "dependencies": ["base >= 0.17.0", "stdlib >= 1.0.0", "PickerAtheneum >= 1.0.0", "(?) FactoReach", "(?) long-reach", "(?) long-reach-fix", "(?) Squeak Through"],
   "homepage": "https://forums.factorio.com/viewtopic.php?f=93&t=14695",
   "description": "Picker Tweaks, and Fixes"
 }

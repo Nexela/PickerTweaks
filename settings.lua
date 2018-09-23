@@ -299,4 +299,25 @@ data:extend {
         default_value = true,
         order = '[Entities]-a'
     },
+    {
+        type = 'string-setting',
+        name = 'picker-wire-color-copper',
+        setting_type = 'startup',
+        default_value = 'default',
+        allowed_values = {'default', 'invisible', '30', '50', '80'},
+    },
+    {
+        type = 'string-setting',
+        name = 'picker-wire-color-green',
+        setting_type = 'startup',
+        default_value = 'default',
+        allowed_values = {'default', 'blue', 'invisible', '50'},
+    },
+    {
+        type = 'string-setting',
+        name = 'picker-wire-color-red',
+        setting_type = 'startup',
+        default_value = 'default',
+        allowed_values = {'default', 'yellow', 'invisible', '50'},
+    }
 }

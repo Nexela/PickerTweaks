@@ -11,6 +11,7 @@ Date: ??????
     - Add legacy belt fast replace option.
     - Add artillery map reveal option.
     - Add free circuit wires option.
+    - Add almost invisible wires option.
   Removal:
     - Better Color Lamps (PickerSignals).
     - More Virtual Signals (PickerSignals).
