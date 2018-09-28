@@ -1,3 +1,4 @@
+-- Robots
 data:extend {
     {
         type = 'bool-setting',
@@ -23,6 +24,25 @@ data:extend {
         order = '[bots]-c'
         --default factorio false
     },
+    {
+        type = 'bool-setting',
+        name = 'picker-noalt-construction-robots',
+        setting_type = 'startup',
+        default_value = true,
+        order = '[bots]-d'
+        --default factorio false
+    },
+    {
+        type = 'bool-setting',
+        name = 'picker-noalt-logistic-robots',
+        setting_type = 'startup',
+        default_value = true,
+        order = '[bots]-e'
+        --default factorio false
+    },
+}
+
+data:extend{
     {
         type = 'int-setting',
         name = 'picker-corpse-time',
