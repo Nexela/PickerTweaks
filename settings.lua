@@ -69,7 +69,7 @@ data:extend{
         setting_type = 'startup',
         default_value = 60,
         minimum_value = 1,
-        maxium_value = 600,
+        maximum_value = 600,
         order = '[inventory]-a'
         --default factorio 60
     },
