@@ -5,33 +5,58 @@
     "author": "grfwoot",
     "description": "Replaces the default flashlight with a better, more realistic version",
 --]]
-if settings.startup['picker-enhanced-lights'].value then
+--[[
+    "name": "LightCone",
+    "title": "Light Cone",
+    "author": "darkfrei",
+    "description": "Changes standart light cone of flashlight",
+--]]
+if settings.startup['picker-enhanced-lights'].value ~= 'default' then
+    local round = {
+        minimum_darkness = 0.1,
+        intensity = 0.3,
+        size = 40,
+        color = {r = 1.0, g = 1.0, b = 1.0}
+    }
+
+    local cones = {
+        darkfrei = {
+            type = 'oriented',
+            minimum_darkness = 0.1, -- 0.2,
+            picture = {
+                filename = '__PickerTweaks__/graphics/lightcone-darkfrei.png',
+                priority = 'extra-high',
+                flags = {'light'},
+                scale = 2,
+                width = 184,
+                height = 369
+            },
+            shift = {0, -24},
+            size = 2,
+            intensity = 0.8,
+            color = {r = 1, g = 1, b = 1}
+        },
+        grfwoot = {
+            type = 'oriented',
+            minimum_darkness = 0.1,
+            picture = {
+                filename = '__PickerTweaks__/graphics/lightcone-enhanced.png',
+                priority = 'extra-high',
+                flags = {'light'},
+                scale = 2,
+                width = 350,
+                height = 370
+            },
+            shift = {0, -24},
+            size = 2,
+            intensity = 0.9,
+            color = {r = 1.0, g = 1.0, b = 1.0}
+        }
+    }
+
     for _, player in pairs(data.raw['player']) do
         if player.light then
-            player.light = {
-                {
-                    minimum_darkness = 0.1,
-                    intensity = 0.3,
-                    size = 40,
-                    color = {r = 1.0, g = 1.0, b = 1.0}
-                },
-                {
-                    type = 'oriented',
-                    minimum_darkness = 0.1,
-                    picture = {
-                        filename = '__PickerTweaks__/graphics/lightcone-enhanced.png',
-                        priority = 'extra-high',
-                        flags = {'light'},
-                        scale = 2,
-                        width = 350,
-                        height = 370
-                    },
-                    shift = {0, -24},
-                    size = 2,
-                    intensity = 0.9,
-                    color = {r = 1.0, g = 1.0, b = 1.0}
-                }
-            }
+            player.light = {round, cones[settings.startup['picker-enhanced-lights'].value]}
         end
     end
 end --))

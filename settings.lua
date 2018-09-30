@@ -141,10 +141,11 @@ data:extend{
     --     order = "[hide-planners]-a"
     -- },
     {
-        type = 'bool-setting',
+        type = 'string-setting',
         name = 'picker-enhanced-lights',
         setting_type = 'startup',
-        default_value = true,
+        default_value = 'grfwoot',
+        allowed_values = {'default', 'grfwoot', 'darkfrei'},
         order = '[brighter-lights]-a'
     },
     {
