@@ -77,21 +77,21 @@ data:extend{
         type = 'double-setting',
         name = 'picker-reacher-reach-distance',
         setting_type = 'startup',
-        default_value = 6,
+        default_value =10,
         maximum_value = 10000,
         minimum_value = 1,
         order = '[reacher]-a'
-        --default factorio 6
+        --default factorio 10
     },
     {
         type = 'double-setting',
         name = 'picker-reacher-build-distance',
         setting_type = 'startup',
-        default_value = 6,
+        default_value = 10,
         maximum_value = 10000,
         minimum_value = 1,
         order = '[reacher]-b'
-        --default factorio 6
+        --default factorio 10
     },
     {
         type = 'double-setting',
@@ -107,11 +107,11 @@ data:extend{
         type = 'double-setting',
         name = 'picker-reacher-drop-item-distance',
         setting_type = 'startup',
-        default_value = 6,
+        default_value = 10,
         maximum_value = 10000,
         minimum_value = 1,
         order = '[reacher]-d'
-        --default factorio 6
+        --default factorio 10
     },
     {
         type = 'double-setting',
