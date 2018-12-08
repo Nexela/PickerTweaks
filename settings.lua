@@ -39,7 +39,7 @@ data:extend {
         default_value = true,
         order = 'robots-e'
         --default factorio false
-}
+    }
 }
 
 -- Reacher
@@ -373,5 +373,18 @@ data:extend {
         default_value = 'default',
         allowed_values = {'default', 'yellow', 'invisible', '50'},
         order = 'wire-color-c'
+    }
+}
+
+-- Sounds
+data:extend {
+    {
+        type = 'double-setting',
+        name = 'picker-belt-sounds',
+        setting_type = 'startup',
+        default_value = 1.0,
+        maximum_value = 2.0,
+        minimum_value = 0.0,
+        order = 'sounds-a'
     }
 }
