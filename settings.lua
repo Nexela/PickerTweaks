@@ -5,7 +5,7 @@ data:extend {
         name = 'picker-unminable-construction-robots',
         setting_type = 'startup',
         default_value = true,
-        order = '[bots]-a'
+        order = 'robots-a'
         --default factorio false
     },
     {
@@ -13,7 +13,7 @@ data:extend {
         name = 'picker-unminable-logistic-robots',
         setting_type = 'startup',
         default_value = true,
-        order = '[bots]-b'
+        order = 'robots-b'
         --default factorio false
     },
     {
@@ -21,7 +21,7 @@ data:extend {
         name = 'picker-fireproof-construction-robots',
         setting_type = 'startup',
         default_value = true,
-        order = '[bots]-c'
+        order = 'robots-c'
         --default factorio false
     },
     {
@@ -29,7 +29,7 @@ data:extend {
         name = 'picker-noalt-construction-robots',
         setting_type = 'startup',
         default_value = true,
-        order = '[bots]-d'
+        order = 'robots-d'
         --default factorio false
     },
     {
@@ -37,50 +37,21 @@ data:extend {
         name = 'picker-noalt-logistic-robots',
         setting_type = 'startup',
         default_value = true,
-        order = '[bots]-e'
+        order = 'robots-e'
         --default factorio false
-    },
+}
 }
 
-data:extend{
-    {
-        type = 'int-setting',
-        name = 'picker-corpse-time',
-        setting_type = 'startup',
-        default_value = 60 * 60,
-        minimum_value = 1,
-        maximum_value = 60 * 60 * 60 * 60,
-        order = '[corpse-time]-a'
-        --default factorio 54000, 15 minutes
-    },
-    {
-        type = 'int-setting',
-        name = 'picker-player-corpse-time',
-        setting_type = 'startup',
-        default_value = 60 * 60 * 15,
-        minimum_value = 1,
-        maximum_value = 60 * 60 * 60 * 60,
-        order = '[corpse-time]-b'
-        --default factorio 54000, 15 minutes
-    },
-    {
-        type = 'int-setting',
-        name = 'picker-inventory-size',
-        setting_type = 'startup',
-        default_value = 60,
-        minimum_value = 1,
-        maximum_value = 600,
-        order = '[inventory]-a'
-        --default factorio 60
-    },
+-- Reacher
+data:extend {
     {
         type = 'double-setting',
         name = 'picker-reacher-reach-distance',
         setting_type = 'startup',
-        default_value =10,
+        default_value = 10,
         maximum_value = 10000,
         minimum_value = 1,
-        order = '[reacher]-a'
+        order = 'reacher-a'
         --default factorio 10
     },
     {
@@ -90,7 +61,7 @@ data:extend{
         default_value = 10,
         maximum_value = 10000,
         minimum_value = 1,
-        order = '[reacher]-b'
+        order = 'reacher-b'
         --default factorio 10
     },
     {
@@ -100,7 +71,7 @@ data:extend{
         default_value = 2.7,
         maximum_value = 10000,
         minimum_value = 1,
-        order = '[reacher]-c'
+        order = 'reacher-c'
         --default factorio 2.7
     },
     {
@@ -110,7 +81,7 @@ data:extend{
         default_value = 10,
         maximum_value = 10000,
         minimum_value = 1,
-        order = '[reacher]-d'
+        order = 'reacher-d'
         --default factorio 10
     },
     {
@@ -120,7 +91,7 @@ data:extend{
         default_value = 1,
         maximum_value = 100,
         minimum_value = 1,
-        order = '[reacher]-e'
+        order = 'reacher-e'
         --default factorio 1
     },
     {
@@ -130,101 +101,113 @@ data:extend{
         default_value = 2,
         maximum_value = 100,
         minimum_value = 1,
-        order = '[reacher]-f'
+        order = 'reacher-f'
         --default factorio 2
-    },
-    -- {
-    --     type = "bool-setting",
-    --     name = "picker-add-planners-library",
-    --     setting_type = "startup",
-    --     default_value = false,
-    --     order = "[hide-planners]-a"
-    -- },
+    }
+}
+
+-- Brighter Lights
+data:extend {
     {
         type = 'string-setting',
         name = 'picker-enhanced-lights',
         setting_type = 'startup',
         default_value = 'grfwoot',
         allowed_values = {'default', 'grfwoot', 'darkfrei'},
-        order = '[brighter-lights]-a'
+        order = 'brighter-lights-a'
     },
     {
         type = 'bool-setting',
         name = 'picker-brighter-lights-player',
         setting_type = 'startup',
         default_value = false,
-        order = '[brighter-lights]-b'
+        order = 'brighter-lights-b'
     },
     {
         type = 'bool-setting',
         name = 'picker-brighter-lights-vehicles',
         setting_type = 'startup',
         default_value = false,
-        order = '[brighter-lights]-c'
-    },
+        order = 'brighter-lights-c'
+    }
+}
+
+-- Squeak Through
+data:extend {
     {
         type = 'bool-setting',
         name = 'picker-smaller-tree-box',
         setting_type = 'startup',
         default_value = true,
-        order = '[squeak-through]-a'
+        order = 'squeak-through-a'
     },
     {
         type = 'bool-setting',
         name = 'picker-squeak-through',
         setting_type = 'startup',
         default_value = false,
-        order = '[squeak-through]-b'
+        order = 'squeak-through-b'
+    }
+}
+
+-- Corpse
+data:extend {
+    {
+        type = 'int-setting',
+        name = 'picker-corpse-time',
+        setting_type = 'startup',
+        default_value = 60 * 60,
+        minimum_value = 1,
+        maximum_value = 60 * 60 * 60 * 60,
+        order = 'corpse-a'
+        --default factorio 54000, 15 minutes
     },
     {
-        type = 'bool-setting',
-        name = 'picker-disable-smoke',
+        type = 'int-setting',
+        name = 'picker-player-corpse-time',
         setting_type = 'startup',
-        default_value = false,
-        order = '[disable]-a'
-    },
-    {
-        type = 'bool-setting',
-        name = 'picker-disable-decorations',
-        setting_type = 'startup',
-        default_value = false,
-        order = '[disable]-b'
-    },
-    {
-        type = 'bool-setting',
-        name = 'picker-roundup',
-        setting_type = 'startup',
-        default_value = true,
-        order = '[roundup]-a'
-    },
-    {
-        type = 'bool-setting',
-        name = 'picker-roundup-resources',
-        setting_type = 'startup',
-        default_value = false,
-        order = '[roundup]-b'
-    },
+        default_value = 60 * 60 * 15,
+        minimum_value = 1,
+        maximum_value = 60 * 60 * 60 * 60,
+        order = 'corpse-b'
+        --default factorio 54000, 15 minutes
+    }
+}
+
+-- Gui
+data:extend {
     {
         type = 'bool-setting',
         name = 'picker-smaller-gui-borders',
         setting_type = 'startup',
         default_value = false,
-        order = '[gui]-a'
+        order = 'gui-a'
     },
     {
         type = 'bool-setting',
         name = 'picker-small-unplugged-icon',
         setting_type = 'startup',
         default_value = true,
-        order = '[smaller]-b'
+        order = 'gui-b'
     },
+    {
+        type = 'bool-setting',
+        name = 'picker-brighter-cell-background',
+        setting_type = 'startup',
+        default_value = false,
+        order = 'gui-b'
+    }
+}
+
+-- Iondicators
+data:extend {
     {
         type = 'string-setting',
         name = 'picker-iondicators-line',
         setting_type = 'startup',
         default_value = 'vanilla',
         allowed_values = {'vanilla', 'green', 'yellow', 'purple', 'blue'},
-        order = '[iondicators]-a'
+        order = 'iondicators-a'
     },
     {
         type = 'string-setting',
@@ -232,7 +215,127 @@ data:extend{
         setting_type = 'startup',
         default_value = 'vanilla',
         allowed_values = {'vanilla', 'green', 'yellow', 'purple', 'blue'},
-        order = '[iondicators]-b'
+        order = 'iondicators-b'
+    }
+}
+
+-- Roundup
+data:extend {
+    {
+        type = 'bool-setting',
+        name = 'picker-disable-smoke',
+        setting_type = 'startup',
+        default_value = false,
+        order = 'roundup-a'
+    },
+    {
+        type = 'bool-setting',
+        name = 'picker-disable-decorations',
+        setting_type = 'startup',
+        default_value = false,
+        order = 'roundup-b'
+    },
+    {
+        type = 'bool-setting',
+        name = 'picker-roundup',
+        setting_type = 'startup',
+        default_value = true,
+        order = 'roundup-c'
+    },
+    {
+        type = 'bool-setting',
+        name = 'picker-roundup-resources',
+        setting_type = 'startup',
+        default_value = false,
+        order = 'roundup-d'
+    }
+}
+
+-- Entities
+data:extend {
+    {
+        type = 'bool-setting',
+        name = 'picker-legacy-belt-fast-replace',
+        setting_type = 'startup',
+        default_value = false,
+        order = 'entities-a'
+    },
+    {
+        type = 'bool-setting',
+        name = 'picker-show-bots-on-map',
+        setting_type = 'startup',
+        default_value = false,
+        order = 'entities-a'
+    },
+    {
+        type = 'bool-setting',
+        name = 'picker-clean-tree-burning',
+        setting_type = 'startup',
+        default_value = false,
+        order = 'entities-a'
+    },
+    {
+        type = 'bool-setting',
+        name = 'picker-fireproof-rail-signals',
+        setting_type = 'startup',
+        default_value = false,
+        order = 'entities-a'
+    },
+    {
+        type = 'bool-setting',
+        name = 'picker-fireproof-rolling-stock',
+        setting_type = 'startup',
+        default_value = false,
+        order = 'entities-b'
+    },
+    {
+        type = 'bool-setting',
+        name = 'picker-generic-vehicle-grids',
+        setting_type = 'startup',
+        default_value = false,
+        order = 'entities-a'
+    },
+    {
+        type = 'bool-setting',
+        name = 'picker-realistic-reactor-glow',
+        setting_type = 'startup',
+        default_value = true,
+        order = 'entities-a'
+    },
+    {
+        type = 'bool-setting',
+        name = 'picker-no-artillery-reveal',
+        setting_type = 'startup',
+        default_value = false,
+        order = 'recipes-a'
+    }
+}
+
+-- Inventory
+data:extend {
+    {
+        type = 'int-setting',
+        name = 'picker-inventory-size',
+        setting_type = 'startup',
+        default_value = 60,
+        minimum_value = 1,
+        maximum_value = 600,
+        order = 'inventory-a'
+        --default factorio 60
+    },
+    {
+        type = 'bool-setting',
+        name = 'picker-replace-wood',
+        setting_type = 'startup',
+        default_value = false,
+        order = 'inventory-b'
+    },
+    {
+        type = 'bool-setting',
+        name = 'picker-free-circuit-wires',
+        setting_type = 'startup',
+        default_value = false,
+        order = 'inventory-c'
     },
     {
         type = 'int-setting',
@@ -241,91 +344,19 @@ data:extend{
         default_value = 0,
         minimum_value = 0,
         maximum_value = 100000,
-        order = '[stack]-a'
-    },
-    {
-        type = 'bool-setting',
-        name = 'picker-brighter-cell-background',
-        setting_type = 'startup',
-        default_value = false,
-        order = '[gui]-b'
-    },
-    {
-        type = 'bool-setting',
-        name = 'picker-fireproof-rail-signals',
-        setting_type = 'startup',
-        default_value = false,
-        order = '[rails]-a'
-    },
-    {
-        type = 'bool-setting',
-        name = 'picker-fireproof-rolling-stock',
-        setting_type = 'startup',
-        default_value = false,
-        order = '[rails]-b'
-    },
-    {
-        type = 'bool-setting',
-        name = 'picker-generic-vehicle-grids',
-        setting_type = 'startup',
-        default_value = false,
-        order = '[vehicles]-a'
-    },
-    {
-        type = 'bool-setting',
-        name = 'picker-replace-wood',
-        setting_type = 'startup',
-        default_value = false,
-        order = '[Recipes]-a'
-    },
-    {
-        type = 'bool-setting',
-        name = 'picker-no-artillery-reveal',
-        setting_type = 'startup',
-        default_value = false,
-        order = '[Recipes]-a'
-    },
-    {
-        type = 'bool-setting',
-        name = 'picker-free-circuit-wires',
-        setting_type = 'startup',
-        default_value = false,
-        order = '[Recipes]-a'
-    },
-    {
-        type = 'bool-setting',
-        name = 'picker-legacy-belt-fast-replace',
-        setting_type = 'startup',
-        default_value = false,
-        order = '[Recipes]-a'
-    },
-    {
-        type = 'bool-setting',
-        name = 'picker-show-bots-on-map',
-        setting_type = 'startup',
-        default_value = false,
-        order = '[Recipes]-a'
-    },
-    {
-        type = 'bool-setting',
-        name = 'picker-clean-tree-burning',
-        setting_type = 'startup',
-        default_value = false,
-        order = '[Recipes]-a'
-    },
-    {
-        type = 'bool-setting',
-        name = 'picker-realistic-reactor-glow',
-        setting_type = 'startup',
-        default_value = true,
-        order = '[Entities]-a'
-    },
+        order = 'inventory-d'
+    }
+}
+
+-- Wire color
+data:extend {
     {
         type = 'string-setting',
         name = 'picker-wire-color-copper',
         setting_type = 'startup',
         default_value = 'default',
         allowed_values = {'default', 'invisible', '30', '50', '80'},
+        order = 'wire-color-a'
     },
     {
         type = 'string-setting',
@@ -333,6 +364,7 @@ data:extend{
         setting_type = 'startup',
         default_value = 'default',
         allowed_values = {'default', 'blue', 'invisible', '50'},
+        order = 'wire-color-b'
     },
     {
         type = 'string-setting',
@@ -340,5 +372,6 @@ data:extend{
         setting_type = 'startup',
         default_value = 'default',
         allowed_values = {'default', 'yellow', 'invisible', '50'},
+        order = 'wire-color-c'
     }
 }
