@@ -1,3 +1,10 @@
+local Color = require('__stdlib__/stdlib/utils/color')
+
+local allowed_colors = {'vanilla'}
+for color_name in pairs(Color.color) do
+    allowed_colors[#allowed_colors + 1] = color_name
+end
+
 -- Robots
 data:extend {
     {
@@ -206,7 +213,7 @@ data:extend {
         name = 'picker-iondicators-line',
         setting_type = 'startup',
         default_value = 'vanilla',
-        allowed_values = {'vanilla', 'green', 'yellow', 'purple', 'blue'},
+        allowed_values = allowed_colors,
         order = 'iondicators-a'
     },
     {
@@ -214,8 +221,20 @@ data:extend {
         name = 'picker-iondicators-arrow',
         setting_type = 'startup',
         default_value = 'vanilla',
-        allowed_values = {'vanilla', 'green', 'yellow', 'purple', 'blue'},
+        allowed_values = allowed_colors,
         order = 'iondicators-b'
+    }
+}
+
+-- Ghost
+data:extend{
+    {
+        type = 'string-setting',
+        name = 'picker-ghost-tint',
+        setting_type = 'startup',
+        default_value = 'vanilla',
+        allowed_values = allowed_colors,
+        order = 'ghost-a'
     }
 }
 
