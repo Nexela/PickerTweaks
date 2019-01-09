@@ -336,11 +336,11 @@ data:extend {
         type = 'int-setting',
         name = 'picker-inventory-size',
         setting_type = 'startup',
-        default_value = 60,
+        default_value = 80,
         minimum_value = 1,
         maximum_value = 600,
         order = 'inventory-a'
-        --default factorio 60
+        --default factorio 80
     },
     {
         type = 'bool-setting',
