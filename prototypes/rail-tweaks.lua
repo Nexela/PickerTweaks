@@ -29,7 +29,7 @@ if settings.startup['picker-fireproof-rolling-stock'].value then
         for _, entity in pairs(data.raw[stock]) do
             local changed = false
             entity.resistances = entity.resistances or {}
-            for _, resistance in pairs(entity.resistance) do
+            for _, resistance in pairs(entity.resistances) do
                 if resistance.type == 'fire' then
                     resistance.percent = 100
                     changed = true
