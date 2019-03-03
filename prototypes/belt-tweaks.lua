@@ -7,7 +7,7 @@ if settings.startup['picker-legacy-belt-fast-replace'].value then
     for _, splitter in pairs(data.raw['splitter']) do
         splitter.fast_replaceable_group = 'splitter'
     end
-    for _, ug in pairs(data.raw['undeground-belt']) do
+    for _, ug in pairs(data.raw['underground-belt']) do
         ug.fast_replaceable_group = 'underground-belt'
     end
 end
