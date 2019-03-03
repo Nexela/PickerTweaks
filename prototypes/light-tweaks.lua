@@ -96,10 +96,12 @@ if settings.startup['picker-brighter-lights-vehicles'].value then
             size = 150,
             minimum_darkness = 0.1
         }
-        loco.back_light[#loco.back_light + 1] = {
-            intensity = 0.9,
-            size = 150,
-            minimum_darkness = 0.1
-        }
+        if loco.back_light then
+            loco.back_light[#loco.back_light + 1] = {
+                intensity = 0.9,
+                size = 150,
+                minimum_darkness = 0.1
+            }
+        end
     end
 end --))
