@@ -13,8 +13,8 @@ local Item = require('__stdlib__/stdlib/data/item')
         and is compatible with nearly any mod that alters those wires.
         I'll add compatibility to other modded wires too if someone ever makes any other color wires. --]]
 if settings.startup['picker-free-circuit-wires'].value then
-    Recipe('red-wire').clear_ingredients()
-    Recipe('green-wire').clear_ingredients()
+    Recipe('red-wire'):clear_ingredients()
+    Recipe('green-wire'):clear_ingredients()
 end --))
 
 --(( Almost Invisible Wires)) --
@@ -33,17 +33,17 @@ if not (settings.startup['picker-wire-color-copper'].value == 'default') then
     shadow.hr_version = nil
 
     if settings.startup['picker-wire-color-copper'].value == 'invisible' then
-        wire.filename = '__PickerTweaks__/graphics/wire/copper/copper-wire.png'
-        wire.hr_version.filename = '__PickerTweaks__/graphics/wire/copper/hr-copper-wire.png'
+        wire.filename = '__PickerTweaks__/graphics/wires/copper/copper-wire.png'
+        wire.hr_version.filename = '__PickerTweaks__/graphics/wires/copper/hr-copper-wire.png'
     elseif settings.startup['picker-wire-color-copper'].value == '80' then
-        wire.filename = '__PickerTweaks__/graphics/wire/copper/80-copper-wire.png'
-        wire.hr_version.filename = '__PickerTweaks__/graphics/wire/copper/80-hr-copper-wire.png'
+        wire.filename = '__PickerTweaks__/graphics/wires/copper/80-copper-wire.png'
+        wire.hr_version.filename = '__PickerTweaks__/graphics/wires/copper/80-hr-copper-wire.png'
     elseif settings.startup['picker-wire-color-copper'].value == '50' then
-        wire.filename = '__PickerTweaks__/graphics/wire/copper/50-copper-wire.png'
-        wire.hr_version.filename = '__PickerTweaks__/graphics/wire/copper/50-hr-copper-wire.png'
+        wire.filename = '__PickerTweaks__/graphics/wires/copper/50-copper-wire.png'
+        wire.hr_version.filename = '__PickerTweaks__/graphics/wires/copper/50-hr-copper-wire.png'
     elseif settings.startup['picker-wire-color-copper'].value == '30' then
-        wire.filename = '__PickerTweaks__/graphics/wire/copper/30-copper-wire.png'
-        wire.hr_version.filename = '__PickerTweaks__/graphics/wire/copper/30-hr-copper-wire.png'
+        wire.filename = '__PickerTweaks__/graphics/wires/copper/30-copper-wire.png'
+        wire.hr_version.filename = '__PickerTweaks__/graphics/wires/copper/30-hr-copper-wire.png'
     end
 end
 
