@@ -1,5 +1,5 @@
 local Data = require('__stdlib__/stdlib/data/data')
-local player = Data('player', 'player')
+local player = Data('character', 'character')
 
 --(( Starting inventory size ))--
 local inv_size = settings.startup['picker-inventory-size'].value
