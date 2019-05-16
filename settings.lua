@@ -407,3 +407,14 @@ data:extend {
         order = 'sounds-a'
     }
 }
+
+-- Ingredients
+data:extend {
+    {
+        type = 'bool-setting',
+        name = 'picker-return-ingredients',
+        setting_type = 'startup',
+        default_value = true,
+        order = 'ingredients-a'
+    }
+}
