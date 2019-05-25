@@ -75,11 +75,13 @@ end
 
 if settings.startup['picker-brighter-lights-vehicles'].value then
     for _, vehicle in pairs(data.raw['car']) do
-        vehicle.light[#vehicle.light + 1] = {
-            intensity = 0.9,
-            size = 150,
-            minimum_darkness = 0.1
-        }
+        if vehicle.light then
+            vehicle.light[#vehicle.light + 1] = {
+                intensity = 0.9,
+                size = 150,
+                minimum_darkness = 0.1
+            }
+        end
     end
 
     for _, loco in pairs(data.raw['locomotive']) do
