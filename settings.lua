@@ -418,3 +418,14 @@ data:extend {
         order = 'ingredients-a'
     }
 }
+
+-- Tiles
+data:extend{
+    {
+        type = 'bool-setting',
+        name = 'picker-multi-concrete',
+        setting_type = 'startup',
+        default_value = true,
+        order = 'tiles-a'
+    }
+}
