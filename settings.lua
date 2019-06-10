@@ -425,7 +425,7 @@ data:extend{
         type = 'bool-setting',
         name = 'picker-multi-concrete',
         setting_type = 'startup',
-        default_value = true,
+        default_value = false,
         order = 'tiles-a'
     }
 }

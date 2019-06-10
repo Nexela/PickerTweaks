@@ -8,7 +8,7 @@
 
 --]]
 local Data = require('__stdlib__/stdlib/data/data')
-if settings.startup['picker-multi-concrete'] then
+if settings.startup['picker-multi-concrete'].value then
     -- Regular Concrete
     Data('concrete', 'tile').next_direction = 'hazard-concrete-left'
     local hzl = Data('hazard-concrete-left', 'tile')

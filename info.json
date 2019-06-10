@@ -1,11 +1,11 @@
 {
   "name": "PickerTweaks",
-  "version": "2.0.7",
+  "version": "2.0.8",
   "factorio_version": "0.17",
   "title": "Picker Tweaks",
   "author": "Nexela",
   "contact": "nexela@gmail.com",
-  "dependencies": ["base >= 0.17.35", "stdlib >= 1.0.0", "PickerAtheneum >= 1.0.0", "(?) FactoReach", "(?) long-reach", "(?) long-reach-fix", "(?) Squeak Through"],
+  "dependencies": ["base >= 0.17.47", "stdlib >= 1.1.0", "PickerAtheneum >= 1.0.4", "(?) FactoReach", "(?) long-reach", "(?) long-reach-fix", "(?) Squeak Through"],
   "homepage": "https://forums.factorio.com/viewtopic.php?f=93&t=14695",
   "description": "Picker Tweaks, and Fixes"
 }
