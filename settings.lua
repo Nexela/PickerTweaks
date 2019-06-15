@@ -429,3 +429,23 @@ data:extend{
         order = 'tiles-a'
     }
 }
+
+-- Undernethies
+data:extend{
+    {
+        type = 'bool-setting',
+        name = 'picker-underground-lengths',
+        setting_type = 'startup',
+        default_value = false,
+        order = 'underneathies-a'
+    },
+    {
+        type = 'int-setting',
+        name = 'picker-underground-bus-gap',
+        setting_type = 'startup',
+        default_value = 4,
+        minimum_value = 1,
+        maximum_value = 32,
+        order = 'underneathies-b'
+    }
+}
