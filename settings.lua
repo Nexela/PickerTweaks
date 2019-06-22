@@ -281,6 +281,13 @@ data:extend {
     },
     {
         type = 'bool-setting',
+        name = 'picker-silent-belts',
+        setting_type = 'startup',
+        default_value = false,
+        order = 'entities-a'
+    },
+    {
+        type = 'bool-setting',
         name = 'picker-show-bots-on-map',
         setting_type = 'startup',
         default_value = false,
