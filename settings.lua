@@ -46,7 +46,24 @@ data:extend {
         default_value = true,
         order = 'robots-e'
         --default factorio false
-    }
+    },
+    {
+        type = 'int-setting',
+        name = 'picker-adjustable-bot-scale',
+        setting_type = 'startup',
+        default_value = 50,
+        minimum_value = 25,
+        maximum_value = 200,
+        order = 'robots-f'
+        --default factorio 100
+    },
+    {
+        type = 'bool-setting',
+        name = 'picker-show-bots-on-map',
+        setting_type = 'startup',
+        default_value = false,
+        order = 'robots-g'
+    },
 }
 
 -- Reacher
@@ -274,27 +291,6 @@ data:extend {
 data:extend {
     {
         type = 'bool-setting',
-        name = 'picker-legacy-belt-fast-replace',
-        setting_type = 'startup',
-        default_value = false,
-        order = 'entities-a'
-    },
-    {
-        type = 'bool-setting',
-        name = 'picker-silent-belts',
-        setting_type = 'startup',
-        default_value = false,
-        order = 'entities-a'
-    },
-    {
-        type = 'bool-setting',
-        name = 'picker-show-bots-on-map',
-        setting_type = 'startup',
-        default_value = false,
-        order = 'entities-a'
-    },
-    {
-        type = 'bool-setting',
         name = 'picker-clean-tree-burning',
         setting_type = 'startup',
         default_value = false,
@@ -437,14 +433,14 @@ data:extend{
     }
 }
 
--- Undernethies
+-- Belts
 data:extend{
     {
         type = 'bool-setting',
         name = 'picker-underground-lengths',
         setting_type = 'startup',
         default_value = false,
-        order = 'underneathies-a'
+        order = 'belts-underneathies-a'
     },
     {
         type = 'int-setting',
@@ -453,6 +449,20 @@ data:extend{
         default_value = 4,
         minimum_value = 1,
         maximum_value = 32,
-        order = 'underneathies-b'
-    }
+        order = 'belts-underneathies-b'
+    },
+    {
+        type = 'bool-setting',
+        name = 'picker-legacy-belt-fast-replace',
+        setting_type = 'startup',
+        default_value = false,
+        order = 'belts-a'
+    },
+    {
+        type = 'bool-setting',
+        name = 'picker-silent-belts',
+        setting_type = 'startup',
+        default_value = false,
+        order = 'belts-b'
+    },
 }

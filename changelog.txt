@@ -1,11 +1,14 @@
 ---------------------------------------------------------------------------------------------------
 Version: 2.2.0
 Date: ??????
-  Features: Added silent belts.
+  Features:
+    - Added silent belts.
+    - Added adjustable robot size
 ---------------------------------------------------------------------------------------------------
 Version: 2.1.0
 Date: ??????
-  Features: Added Underground distance matches bus options. Should work with most mods that add belts.
+  Features:
+    - Added Underground distance matches bus options. Should work with most mods that add belts.
 ---------------------------------------------------------------------------------------------------
 Version: 2.0.8
 Date: ??????
