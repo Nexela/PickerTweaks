@@ -17,10 +17,10 @@ local function resize_bot(entity)
             local hr = nr.hr_version
             if hr then
                 hr.scale = (hr.scale or 1) * scale
-    end
+            end
         end
     end
-        end
+end
 
 --Make them un-minable and fire proof and show on map
 for index, bot in pairs(types) do
@@ -32,7 +32,17 @@ for index, bot in pairs(types) do
             end
             if settings.startup['picker-fireproof-construction-robots'].value then
                 entity.resistances = entity.resistances or {}
-                table.insert(entity.resistances, {type = 'fire', percent = 100})
+                local changed = false
+                for _, resistance in pairs(entity.resistances) do
+                    if resistance.type == 'fire' then
+                        resistance.percent = 100
+                        changed = true
+                        break
+                    end
+                end
+                if not changed then
+                    table.insert(entity.resistances, {type = 'fire', percent = 100})
+                end
             end
             if settings.startup['picker-noalt-construction-robots'].value then
                 flags:add('hide-alt-info')

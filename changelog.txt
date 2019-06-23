@@ -3,7 +3,9 @@ Version: 2.2.0
 Date: ??????
   Features:
     - Added silent belts.
-    - Added adjustable robot size
+    - Added adjustable robot size.
+  Bugfixes:
+    - Fixed incorrect bot resistance application.
 ---------------------------------------------------------------------------------------------------
 Version: 2.1.0
 Date: ??????
