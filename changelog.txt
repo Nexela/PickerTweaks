@@ -2,6 +2,7 @@
 Version: 2.2.0
 Date: ??????
   Features:
+    - Update to Factorio 0.18
     - Added silent belts.
     - Added adjustable robot size.
   Bugfixes:

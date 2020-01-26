@@ -11,6 +11,7 @@ if settings.startup['picker-realistic-reactor-glow'].value then
     -- "description": "The glow of working nuclear reactor has the proper color now!"
     local nuclearReactorItem = Data("nuclear-reactor", "item")
     nuclearReactorItem.icon = get_new_path(nuclearReactorItem.icon)
+    nuclearReactorItem.icon_size = 32
 
     local nuclearReactorReactor = Data('nuclear-reactor', 'reactor')
     nuclearReactorReactor.light.color = {b = 0.94, g = 1, r = 0}
