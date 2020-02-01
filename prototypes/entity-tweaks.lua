@@ -12,6 +12,7 @@ if settings.startup['picker-realistic-reactor-glow'].value then
     local nuclearReactorItem = Data("nuclear-reactor", "item")
     nuclearReactorItem.icon = get_new_path(nuclearReactorItem.icon)
     nuclearReactorItem.icon_size = 32
+    nuclearReactorItem.icon_mipmaps = 1
 
     local nuclearReactorReactor = Data('nuclear-reactor', 'reactor')
     nuclearReactorReactor.light.color = {b = 0.94, g = 1, r = 0}

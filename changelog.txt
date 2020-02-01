@@ -69,10 +69,10 @@ Date: ??????
     - Add free circuit wires option.
     - Add almost invisible wires option.
     - Add more blueprinty like blueprint option.
-  Removal:
-    - Better Color Lamps (PickerSignals).
-    - More Virtual Signals (PickerSignals).
-    - Entities for Notes (PickerNotes).
+  Changes:
+    - Moved Better Color Lamps (PickerSignals).
+    - Moved More Virtual Signals (PickerSignals).
+    - Moved Entities for Notes (PickerNotes).
 ---------------------------------------------------------------------------------------------------
 Version: 1.0.2
 Date: ??????
