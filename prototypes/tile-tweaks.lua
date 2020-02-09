@@ -1,11 +1,9 @@
 --[[
-{
   "name": "MultiConcrete",
   "title": "MultiConcrete",
   "description": "Concrete and Hazard Concrete is the same thing, just rotate it before placement",
   "author": "darkfrei",
   "license": "MIT",
-
 --]]
 local Data = require('__stdlib__/stdlib/data/data')
 if settings.startup['picker-multi-concrete'].value then

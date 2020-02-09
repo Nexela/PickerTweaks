@@ -5,7 +5,6 @@
 -- Code modified from:
 --[[
     "name": "VehicleGrid",
-    "version": "0.1.2",
     "title": "Vehicle Grid",
     "author": "Optera",
     "contact": "https://forums.factorio.com/memberlist.php?mode=viewprofile&u=21729",

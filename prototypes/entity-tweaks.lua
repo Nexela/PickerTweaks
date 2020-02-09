@@ -5,10 +5,12 @@ local function get_new_path(oldTexturePath)
 end
 
 if settings.startup['picker-realistic-reactor-glow'].value then
-    -- "name": "RealisticReactorGlow",
-    -- "title": "Realistic Reactor Glow",
-    -- "author": "<NO_NAME>",
-    -- "description": "The glow of working nuclear reactor has the proper color now!"
+    --[[
+        "name": "RealisticReactorGlow",
+        "title": "Realistic Reactor Glow",
+        "author": "<NO_NAME>",
+        "description": "The glow of working nuclear reactor has the proper color now!"
+    --]]
     local nuclearReactorItem = Data("nuclear-reactor", "item")
     nuclearReactorItem.icon = get_new_path(nuclearReactorItem.icon)
     nuclearReactorItem.icon_size = 32
