@@ -88,16 +88,20 @@ if settings.startup['picker-brighter-lights-vehicles'].value then
         --front_light is the headlight going forward
         --back_light is the red light at the back
         --stand_by_light is the blue light at the front when parked.
-        loco.front_light[#loco.front_light + 1] = {
-            intensity = 0.9,
-            size = 150,
-            minimum_darkness = 0.1
-        }
-        loco.stand_by_light[#loco.stand_by_light + 1] = {
-            intensity = 0.9,
-            size = 150,
-            minimum_darkness = 0.1
-        }
+        if loco.front_light then
+            loco.front_light[#loco.front_light + 1] = {
+                intensity = 0.9,
+                size = 150,
+                minimum_darkness = 0.1
+            }
+        end
+        if loco.stand_by_light then
+            loco.stand_by_light[#loco.stand_by_light + 1] = {
+                intensity = 0.9,
+                size = 150,
+                minimum_darkness = 0.1
+            }
+        end
         if loco.back_light then
             loco.back_light[#loco.back_light + 1] = {
                 intensity = 0.9,
