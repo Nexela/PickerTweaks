@@ -1,10 +1,11 @@
+-- TODO Fixme nuclearReactorReactor.working_light_picture.filename nil
 local Data = require('__stdlib__/stdlib/data/data')
 
 local function get_new_path(oldTexturePath)
     return (string.gsub(oldTexturePath, '^%_%_base%_%_', '__PickerTweaks__'))
 end
 
-if settings.startup['picker-realistic-reactor-glow'].value then
+if not mods['RealisticReactorGlow'] and settings.startup['picker-realistic-reactor-glow'].value then
     --[[
         "name": "RealisticReactorGlow",
         "title": "Realistic Reactor Glow",
