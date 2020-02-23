@@ -31,7 +31,10 @@
         ]
     },
     {
-        "small fixes": ""
+        "name": "SmallFixes",
+        "title": "SmallFixes",
+        "author": "Choumiko",
+        "description": "Small non game changing/breaking fixes"
     },
     {
         "name": "ShowBotsOnMap",

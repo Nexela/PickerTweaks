@@ -2,6 +2,9 @@
 Version: 2.2.1
 Date: ????
   Changes:
+    - No longer requires Picker Atheneum.
+  Bugfixes:
+    - Fixes some bugs throughout the code.
 ---------------------------------------------------------------------------------------------------
 Version: 2.2.0
 Date: ??????

@@ -1,39 +1,65 @@
 # Picker Tweaks
 
-Adds various small data tweaks for adjusting base values of items. Tweaks are adjustable via Mod Settings and most start off at factorio defaults.
+Adds various small prototype tweaks. Tweaks are adjustable via Mod Settings and most start off at factorio default values allowing you to pick and choose your tweak.
 
-## Squeak Through
+## QUALITY OF LIFE
 
-Adjusts collision books of many entities to make it easier to walk around them.
+### Disable Decorations
 
-## Smaller Tree Collision
+### Smokeless
 
-Adjusts the collision boxes of trees only to make them easier to navigate.
+### Lights
 
-## Disable Decorations
+### Extra Settings Info
 
-Disables decorations completley for a more clutter free map.
+### Belt Fast Replace Legacy
 
-## Smokeless
+### Silent Belts
 
-Removes smoke from many entities.
+### Smaller Robots
 
-## Vehicle Grids
+### Show Bots on Map
 
-Adds generic grids to vehicles.
+### Iondicators Inserter Arrows
 
-## Lights
+### Unminable Logistic and Construction Bots
 
-Adds a better flashlight to the player, as well as an option for super bright lights.
+### Hide Robot Alt Info
 
-## Iondicators
+### Adjustable Corpse Fading
 
-Change the Pickup and Drop off indicators on inserters.
+### Cleaner Tree Burning
 
-## Small Fixes
+### Change the Ghost Color
 
-Adds many smaller tweaks and fixes.
+### Realistic Reactor Glow
 
-## Extra Settings Info
+### Put all Selection tools into the Library
 
-Adds additional tooltip info to Mod-Settings.
+## QUALITY OF LIFE PLUS
+
+### Long Reach
+
+### Custom Inventory Size
+
+### Increasable Tile Stack Size
+
+### Underground Belts Span Bus Width
+
+### Squeak Through
+
+### Smaller Tree Collision
+
+### Generic Vehicle Grids
+
+### Don't lose in progress ingredients
+
+### Fire Proof Logistic and Construction Robots
+
+### Fire Proof Train and Train Signals
+
+### Free Network Wiring
+
+### Remove trees from ore patches
+
+### Remove Wood from the Game

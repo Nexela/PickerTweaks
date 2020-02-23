@@ -23,7 +23,7 @@ if settings.startup['picker-underground-lengths'].value then
 
     table.sort(undergrounds, _sort_by_speed)
 
-    for i, ent in pairs(undergrounds) do
+    for i, ent in ipairs(undergrounds) do
         ent.max_distance = ((GAP + 1) * i) + (i - 1)
     end
 end
