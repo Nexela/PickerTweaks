@@ -48,14 +48,14 @@ data:extend {
         --default factorio false
     },
     {
-        type = 'int-setting',
+        type = 'double-setting',
         name = 'picker-adjustable-bot-scale',
         setting_type = 'startup',
-        default_value = 50,
-        minimum_value = 25,
-        maximum_value = 200,
+        default_value = 0.5,
+        minimum_value = 0.1,
+        maximum_value = 2.0,
         order = 'robots-f'
-        --default factorio 100
+        --default factorio 1
     },
     {
         type = 'bool-setting',
