@@ -9,7 +9,7 @@
   "homepage": "https://forums.factorio.com/viewtopic.php?f=93&t=14695",
   "description": "Picker Tweaks, and Fixes",
   "package": {
-    "ignore": ["makefile"],
+    "ignore": [],
     "scripts": {
       "datestamp": "../PickerAtheneum/.publish/datestamp.sh",
       "prepackage": "../PickerAtheneum/.publish/prepackage.sh",
