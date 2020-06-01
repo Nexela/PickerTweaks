@@ -43,7 +43,7 @@ end
 -- "author": "ZlovreD",
 -- "homepage": "https://forums.factorio.com/viewtopic.php?f=144&t=45154",
 -- "description": "Makes gui cells for inventory, technology, toolbars a little lighter (like as before)"
-if settings.startup['picker-brighter-cell-background'].value then
+if settings.startup['picker-brighter-cell-background'].value and false then
     local function bluebuttongraphcialset(state)
         local offset = nil
         if state == 'default' then
