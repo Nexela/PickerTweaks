@@ -1,4 +1,3 @@
--- TODO Fixme nuclearReactorReactor.working_light_picture.filename nil
 local Data = require('__stdlib__/stdlib/data/data')
 
 if not mods['RealisticReactorGlow'] and settings.startup['picker-realistic-reactor-glow'].value then
