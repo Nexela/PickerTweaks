@@ -62,4 +62,8 @@ if settings.startup["picker-generic-vehicle-grids"].value then
     for _, entity in pairs(data.raw["fluid-wagon"]) do
         entity.equipment_grid = entity.equipment_grid or "wagon-equipment-grid"
     end
+
+    for _, entity in pairs(data.raw["artillery-wagon"]) do
+        entity.equipment_grid = entity.equipment_grid or "wagon-equipment-grid"
+    end
 end
