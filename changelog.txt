@@ -3,6 +3,8 @@ Version: 2.2.4
 Date: ????
   Changes:
     - Clean up prototype loading.
+  Bugfixes:
+    - Fix smokeless startup. #12
 ---------------------------------------------------------------------------------------------------
 Version: 2.2.3
 Date: 2020-09-22
