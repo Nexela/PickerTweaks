@@ -4,6 +4,7 @@ Date: ????
   Features:
     - Added grids for artillery-wagons.
   Changes:
+    - Removed realistic reactor glow.
 ---------------------------------------------------------------------------------------------------
 Version: 2.2.4
 Date: 2020-10-24
