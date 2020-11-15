@@ -5,6 +5,9 @@ Date: ????
     - Added grids for artillery-wagons.
   Changes:
     - Removed realistic reactor glow.
+    - Removed smaller gui borders.
+    - Removed lighter selection cell color.
+    - Removed silents belts, use belt sound modifier setting.
 ---------------------------------------------------------------------------------------------------
 Version: 2.2.4
 Date: 2020-10-24

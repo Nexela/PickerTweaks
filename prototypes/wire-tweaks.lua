@@ -1,7 +1,7 @@
 local Recipe = require('__stdlib__/stdlib/data/recipe')
 local Item = require('__stdlib__/stdlib/data/item')
 
---(( Free Wires )) --
+-- (( Free Wires )) --
 --[[
     "name": "freenetworkwiring",
     "title": "Free Network Wiring",
@@ -13,13 +13,13 @@ local Item = require('__stdlib__/stdlib/data/item')
         blueprints give you the wires for free, so this mod makes the red and green wires free,
         and is compatible with nearly any mod that alters those wires.
         I'll add compatibility to other modded wires too if someone ever makes any other color wires.
---]]
+--]] --
 if settings.startup['picker-free-circuit-wires'].value then
     Recipe('red-wire'):clear_ingredients()
     Recipe('green-wire'):clear_ingredients()
-end --))
+end
 
---(( Almost Invisible Wires)) --
+-- (( Almost Invisible Wires)) --
 --[["name": "AlmostInvisibleElectricWires",
     "version": "0.0.5",
     "title": "Almost Invisible Electric Wires",
@@ -27,7 +27,8 @@ end --))
     "description":
         "You can make the wires 80%, 50% or completely invisible.
         The Red and Green wire can be Blue and Yellow, or invisible too.
-        Now you can customize it in settings.", --]]
+        Now you can customize it in settings.",
+--]] --
 if not (settings.startup['picker-wire-color-copper'].value == 'default') then
     local wire = data.raw['utility-sprites']['default'].copper_wire
     local shadow = data.raw['utility-sprites']['default'].wire_shadow
@@ -85,4 +86,4 @@ if not (settings.startup['picker-wire-color-red'].value == 'default') then
         wire.filename = '__PickerTweaks__/graphics/wires/red/50-red-wire.png'
         wire.hr_version.filename = '__PickerTweaks__/graphics/wires/red/50-hr-red-wire.png'
     end
-end --))
+end

@@ -8,8 +8,9 @@
     "title": "Vehicle Grid",
     "author": "Optera",
     "contact": "https://forums.factorio.com/memberlist.php?mode=viewprofile&u=21729",
-    "description": "Adds an equipment grid to any base or modded vehicle without grid.\ncars 8x8, tanks 12x10, locomotives 10x8, wagons 10x6",
- --]]
+    "description": "Adds an equipment grid to any base or modded vehicle without grid.
+                    \ncars 8x8, tanks 12x10, locomotives 10x8, wagons 10x6",
+ --]] --
 
 if settings.startup["picker-generic-vehicle-grids"].value then
     data:extend{

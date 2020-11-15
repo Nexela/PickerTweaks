@@ -11,4 +11,3 @@ if settings.startup["picker-replace-wood"].value then
     Recipe('combat-shotgun'):replace_ingredient('wood', 'coal')
     Recipe('steel-axe'):replace_ingredient('wood', 'iron-plate')
 end
---))

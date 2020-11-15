@@ -202,23 +202,9 @@ data:extend {
 data:extend {
     {
         type = 'bool-setting',
-        name = 'picker-smaller-gui-borders',
-        setting_type = 'startup',
-        default_value = false,
-        order = 'gui-a'
-    },
-    {
-        type = 'bool-setting',
         name = 'picker-small-unplugged-icon',
         setting_type = 'startup',
         default_value = true,
-        order = 'gui-b'
-    },
-    {
-        type = 'bool-setting',
-        name = 'picker-brighter-cell-background',
-        setting_type = 'startup',
-        default_value = false,
         order = 'gui-b'
     }
 }
@@ -450,12 +436,5 @@ data:extend{
         setting_type = 'startup',
         default_value = false,
         order = 'belts-a'
-    },
-    {
-        type = 'bool-setting',
-        name = 'picker-silent-belts',
-        setting_type = 'startup',
-        default_value = false,
-        order = 'belts-b'
-    },
+    }
 }

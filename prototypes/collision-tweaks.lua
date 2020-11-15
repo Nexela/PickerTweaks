@@ -1,7 +1,6 @@
 --------------------------------------------------------------------------------
 --[[Squeak-Through]] --
 --------------------------------------------------------------------------------
-
 --[[
     "name": "Squeak Through",
     "author": "Nommy, Lupin, & Supercheese",
@@ -24,7 +23,7 @@
 
     You should have received a copy of the GNU General Public License
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
-]]
+]] --
 local Area = require('__stdlib__/stdlib/area/area')
 
 local gap_requirements = {
@@ -53,16 +52,12 @@ local gap_requirements = {
     ['furnace'] = 0.25,
     ['lab'] = 0.25
 }
-if not settings.startup['picker-smaller-tree-box'].value then
-    gap_requirements.tree = 0.42
-end
+if not settings.startup['picker-smaller-tree-box'].value then gap_requirements.tree = 0.42 end
 
---(( Smaller Tree Collision ))--
+-- (( Smaller Tree Collision ))--
 if settings.startup['picker-smaller-tree-box'].value then
     for _, stupid_tree in pairs(data.raw['tree']) do
-        if stupid_tree.collision_box then
-            stupid_tree.collision_box = {{-0.05, -0.05}, {0.05, 0.05}}
-        end
+        if stupid_tree.collision_box then stupid_tree.collision_box = {{-0.05, -0.05}, {0.05, 0.05}} end
     end
 end
 
@@ -77,25 +72,20 @@ local function adjust_coordinate_to_form_gap(coordinate, required_gap)
 
     local tile_width = 0.5
 
-    -- Calculate the existing gap (how much space there is to the next tile edge or 0 when the coordinate lies on a tile edge).
+    -- Calculate the existing gap (how much space there is to the next tile edge or 0
+    -- when the coordinate lies on a tile edge).
     local distance_past_last_tile_edge = coordinate % tile_width -- This is how far the collision box extends over any tile edge, and should be 0 for a perfect fit.
     local existing_gap = 0
-    if distance_past_last_tile_edge > 0 then
-        existing_gap = (tile_width - distance_past_last_tile_edge)
-    end
+    if distance_past_last_tile_edge > 0 then existing_gap = (tile_width - distance_past_last_tile_edge) end
 
     -- Reduce the coordinate to make the gap large enough if it is not already.
     if existing_gap < required_gap then
         coordinate = coordinate + existing_gap - required_gap
-        if coordinate < 0 then
-            coordinate = 0
-        end
+        if coordinate < 0 then coordinate = 0 end
     end
 
     -- Make the coordinate negative again if it was originally negative.
-    if negative then
-        coordinate = coordinate * -1
-    end
+    if negative then coordinate = coordinate * -1 end
 
     return coordinate
 end
@@ -105,10 +95,12 @@ end
 local function adjust_collision_boxes()
     for prototype_type, required_gap in pairs(gap_requirements) do
         for _, prototype in pairs(data.raw[prototype_type]) do
-            if not prototype.ignore_squeak_through and prototype.collision_box and Area(prototype.collision_box):size() > 0 then
+            if not prototype.ignore_squeak_through and
+                (prototype.collision_box and Area(prototype.collision_box):size() > 0) then
                 for y = 1, 2 do
                     for x = 1, 2 do
-                        prototype.collision_box[x][y] = adjust_coordinate_to_form_gap(prototype.collision_box[x][y], required_gap)
+                        prototype.collision_box[x][y] = adjust_coordinate_to_form_gap(prototype.collision_box[x][y],
+                            required_gap)
                     end
                 end
             end
@@ -116,6 +108,4 @@ local function adjust_collision_boxes()
     end
 end
 
-if settings.startup['picker-squeak-through'].value then
-    adjust_collision_boxes()
-end
+if settings.startup['picker-squeak-through'].value then adjust_collision_boxes() end

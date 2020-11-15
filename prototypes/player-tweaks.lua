@@ -1,14 +1,12 @@
 local Data = require('__stdlib__/stdlib/data/data')
 local player = Data('character', 'character')
 
---(( Starting inventory size ))--
+-- (( Starting inventory size ))--
 local inv_size = settings.startup['picker-inventory-size'].value
---Modify player inventory size
-if player.inventory_size < inv_size then
-    player.inventory_size = inv_size
-end
+-- Modify player inventory size
+if player.inventory_size < inv_size then player.inventory_size = inv_size end
 
---(( Reacher ))--
+-- (( Reacher ))--
 player.build_distance = settings.startup['picker-reacher-build-distance'].value
 player.reach_distance = settings.startup['picker-reacher-reach-distance'].value
 player.reach_resource_distance = settings.startup['picker-reacher-reach-resource-distance'].value
