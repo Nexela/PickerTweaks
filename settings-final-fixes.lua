@@ -8,7 +8,7 @@
     "author": "Noxy",
 --]]
 
--- Setting prefixs to check for and then ignore
+-- Setting prefixes to check for and then ignore
 local mod_settings_blacklist = {
     "arachnophobia",
     "vanillaLoaders",
