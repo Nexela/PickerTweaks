@@ -23,8 +23,8 @@ if data.raw['bool-setting'] then
     -- For every setting in 'bool-setting'
     for _, v in pairs(data.raw['bool-setting']) do
         -- Check if the setting is blacklisted
-        for _, s in pairs(mod_settings_blacklist) do
-            if string.find(v.name, s, 1, true) then goto continue end -- If true, setting is blacklisted, do nothing
+        for _, setting in pairs(mod_settings_blacklist) do
+            if string.find(v.name, setting, 1, true) then goto continue end -- If true, setting is blacklisted, do nothing
         end
 
         -- Append default to setting description, checking if localised_description was set already
@@ -45,8 +45,8 @@ for _, s in pairs {'int-setting', 'double-setting'} do
     if data.raw[s] then
         for _, v in pairs(data.raw[s]) do
             -- Check if the setting is blacklisted
-            for _, s in pairs(mod_settings_blacklist) do
-                if string.find(v.name, s, 1, true) then goto continue end -- If true, setting is blacklisted, do nothing
+            for _, setting in pairs(mod_settings_blacklist) do
+                if string.find(v.name, setting, 1, true) then goto continue end -- If true, setting is blacklisted, do nothing
             end
 
             -- Construct table of min/max/default values
@@ -79,8 +79,8 @@ end
 if data.raw['string-setting'] then
     for _, v in pairs(data.raw['string-setting']) do
         -- Check if the setting is blacklisted
-        for _, s in pairs(mod_settings_blacklist) do
-            if string.find(v.name, s, 1, true) then goto continue end -- If true, setting is blacklisted, do nothing
+        for _, setting in pairs(mod_settings_blacklist) do
+            if string.find(v.name, setting, 1, true) then goto continue end -- If true, setting is blacklisted, do nothing
         end
 
         -- Construct table of defaults/permissions
