@@ -1,6 +1,6 @@
 ---------------------------------------------------------------------------------------------------
 Version: 2.2.6
-Date: ????
+Date: 2021-11-07
   Changes:
     - Adjusted behavior of setting description default appending to allow for existing localised descriptions, and added a blacklist to ignore specified sets of mod settings
 ---------------------------------------------------------------------------------------------------
