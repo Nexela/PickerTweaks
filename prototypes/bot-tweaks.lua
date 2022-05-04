@@ -49,7 +49,7 @@ for index, bot in pairs(types) do
             --[[
                 "name": "SmallRobots",
                 "title": "Small Robots - Just make the two robots a little smaller.",
-	            "author": "DellAquila, Kryzeth",
+                "author": "DellAquila, Kryzeth",
                 "description": "Logistic Robot and Construction Robot are 50% smaller. Better with mod
                     More accurate player size compared to vehicles. Work with all modded robots.
                     You can set the size you want for your robots Smaller or Bigger."
