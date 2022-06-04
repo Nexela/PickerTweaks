@@ -41,5 +41,7 @@ if settings.startup['picker-disable-smoke'].value then
             end
         end
     end
-    __DebugAdapter.print(count .. ' Smoking entities changed.')
+    if __DebugAdapter then
+        __DebugAdapter.print(count .. ' Smoking entities changed.')
+    end
 end
