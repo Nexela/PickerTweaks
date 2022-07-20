@@ -3,10 +3,10 @@
 -- "author": "ShinyAfro",
 -- "description": "Makes train signals fire-proof",
 if settings.startup['picker-fireproof-rail-signals'].value then
-    for _, t_name in pairs({'rail-signal', 'rail-chain-signal', 'train-stop'}) do
+    for _, t_name in pairs { 'rail-signal', 'rail-chain-signal', 'train-stop' } do
         for _, t in pairs(data.raw[t_name]) do
             t.resistances = t.resistances or {}
-            t.resistances[#t.resistances + 1] = {type = 'fire', percent = 100}
+            t.resistances[#t.resistances + 1] = { type = 'fire', percent = 100 }
         end
     end
 end
@@ -37,7 +37,7 @@ if settings.startup['picker-fireproof-rolling-stock'].value then
                 end
             end
             if not changed then
-                table.insert(entity.resistances, {type = 'fire', percent = 100})
+                table.insert(entity.resistances, { type = 'fire', percent = 100 })
             end
         end
     end

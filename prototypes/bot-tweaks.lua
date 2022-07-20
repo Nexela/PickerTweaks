@@ -2,7 +2,7 @@
 -- Based on Small-Fixes by Choumiko
 local Data = require('__stdlib__/stdlib/data/data')
 
-local types = {'construction-robot', 'logistic-robot'}
+local types = { 'construction-robot', 'logistic-robot' }
 
 local scale = settings.startup['picker-adjustable-bot-scale'].value
 
@@ -37,7 +37,7 @@ for index, bot in pairs(types) do
                         break
                     end
                 end
-                if not changed then table.insert(entity.resistances, {type = 'fire', percent = 100}) end
+                if not changed then table.insert(entity.resistances, { type = 'fire', percent = 100 }) end
             end
             if settings.startup['picker-noalt-construction-robots'].value then flags:add('hide-alt-info') end
         end
@@ -64,7 +64,7 @@ for index, bot in pairs(types) do
                 "author": "darkfrei",
             --]]
             flags:remove('not-on-map')
-            entity.map_color = {r = index - 1, g = index - 1, b = index - 1}
+            entity.map_color = { r = index - 1, g = index - 1, b = index - 1 }
         end
     end
 end

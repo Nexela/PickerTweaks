@@ -21,12 +21,12 @@ if settings.startup['picker-multi-concrete'].value then
 
     -- Refined Concrete
     Data('refined-concrete', 'tile').next_direction = 'refined-hazard-concrete-left'
-    local rhcl = Data('refined-hazard-concrete-left', 'tile')
-    rhcl.next_direction = 'refined-hazard-concrete-right'
-    rhcl.minable.result = 'refined-concrete'
-    local rhcr = Data('refined-hazard-concrete-right', 'tile')
-    rhcr.next_direction = 'refined-concrete'
-    rhcr.minable.result = 'refined-concrete'
+    local rh_cl = Data('refined-hazard-concrete-left', 'tile')
+    rh_cl.next_direction = 'refined-hazard-concrete-right'
+    rh_cl.minable.result = 'refined-concrete'
+    local rh_cr = Data('refined-hazard-concrete-right', 'tile')
+    rh_cr.next_direction = 'refined-concrete'
+    rh_cr.minable.result = 'refined-concrete'
     Data('refined-hazard-concrete', 'recipe').hidden = true
     Data('refined-hazard-concrete', 'item'):add_flag('hidden')
 end

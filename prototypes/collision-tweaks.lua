@@ -57,7 +57,7 @@ if not settings.startup['picker-smaller-tree-box'].value then gap_requirements.t
 -- (( Smaller Tree Collision ))--
 if settings.startup['picker-smaller-tree-box'].value then
     for _, stupid_tree in pairs(data.raw['tree']) do
-        if stupid_tree.collision_box then stupid_tree.collision_box = {{-0.05, -0.05}, {0.05, 0.05}} end
+        if stupid_tree.collision_box then stupid_tree.collision_box = { { -0.05, -0.05 }, { 0.05, 0.05 } } end
     end
 end
 
@@ -74,7 +74,8 @@ local function adjust_coordinate_to_form_gap(coordinate, required_gap)
 
     -- Calculate the existing gap (how much space there is to the next tile edge or 0
     -- when the coordinate lies on a tile edge).
-    local distance_past_last_tile_edge = coordinate % tile_width -- This is how far the collision box extends over any tile edge, and should be 0 for a perfect fit.
+    -- This is how far the collision box extends over any tile edge, and should be 0 for a perfect fit.
+    local distance_past_last_tile_edge = coordinate % tile_width
     local existing_gap = 0
     if distance_past_last_tile_edge > 0 then existing_gap = (tile_width - distance_past_last_tile_edge) end
 

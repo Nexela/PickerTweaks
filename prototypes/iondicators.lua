@@ -11,7 +11,7 @@ local utility_sprites = data.raw['utility-sprites'].default
 -- "description": "Smaller icon for Logistic Delivery (Robots)",
 if settings.startup['picker-small-unplugged-icon'].value then
     data.raw['item-request-proxy']['item-request-proxy'].picture.filename =
-        '__PickerTweaks__/graphics/material-construction.png'
+    '__PickerTweaks__/graphics/material-construction.png'
     utility_sprites.electricity_icon_unplugged.filename = '__PickerTweaks__/graphics/electricity-icon-unplugged.png'
     utility_sprites.too_far_from_roboport_icon.filename = '__PickerTweaks__/graphics/too-far-from-roboport-icon.png'
 end

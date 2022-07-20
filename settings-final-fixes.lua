@@ -36,7 +36,7 @@ if data.raw['bool-setting'] then
                     }
                 else
                     v.localised_description = {
-                        'picker-extra-settings-info.merge', {'mod-setting-description.' .. v.name},
+                        'picker-extra-settings-info.merge', { 'mod-setting-description.' .. v.name },
                         '\n\n' .. 'Default: ' .. tostring(v.default_value)
                     }
                 end
@@ -47,7 +47,7 @@ if data.raw['bool-setting'] then
 end
 
 -- Append defaults to int/double settings
-for _, s in pairs{'int-setting', 'double-setting'} do
+for _, s in pairs { 'int-setting', 'double-setting' } do
     if data.raw[s] then
         for _, v in pairs(data.raw[s]) do
             -- Check if the setting is blacklisted
@@ -66,7 +66,7 @@ for _, s in pairs{'int-setting', 'double-setting'} do
                         }
                     else
                         v.localised_description = {
-                            'picker-extra-settings-info.merge', {'mod-setting-description.' .. v.name},
+                            'picker-extra-settings-info.merge', { 'mod-setting-description.' .. v.name },
                             '\n\n' .. table.concat(t, ', ')
                         }
                     end
@@ -99,7 +99,7 @@ if data.raw['string-setting'] then
                     }
                 else
                     v.localised_description = {
-                        'picker-extra-settings-info.merge', {'mod-setting-description.' .. v.name},
+                        'picker-extra-settings-info.merge', { 'mod-setting-description.' .. v.name },
                         '\n\n' .. table.concat(t, ', ')
                     }
                 end
