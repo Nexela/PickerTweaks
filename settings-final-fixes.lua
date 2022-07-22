@@ -7,7 +7,7 @@
     "title": "Noxys Extra Settings Info",
     "author": "Noxy",
 --]] --
-local table = require('__stdlib__/stdlib/utils/table')
+local table = require('__stdlib__/stdlib/utils/table') ---@type table
 
 -- Setting prefixes to check for and then ignore, This list is unmaintained. Future use should have the mod in question
 -- set skip_picker_default_message = true when extending their setting.
@@ -49,7 +49,7 @@ end
 -- Append defaults to int/double settings
 for _, s in pairs { 'int-setting', 'double-setting' } do
     if data.raw[s] then
-        for _, v in pairs(data.raw[s]) do
+        for _, v in pairs(data.raw[s]) --[[@as fun(): any, SettingType.DoubleSetting|SettingType.IntSetting]] do
             -- Check if the setting is blacklisted
             if not is_blacklisted(v) then
                 -- Construct table of min/max/default values

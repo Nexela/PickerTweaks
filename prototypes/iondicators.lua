@@ -1,5 +1,5 @@
-local Color = require('__stdlib__/stdlib/utils/color')
-local utility_sprites = data.raw['utility-sprites'].default
+local Color = require('__stdlib__/stdlib/utils/color') ---@type table
+local utility_sprites = assert(data.raw['utility-sprites'].default, "default utility-sprites not found")
 
 -------------------------------------------------------------------------------
 -- [Smaller no power]--
@@ -25,9 +25,9 @@ local ion_line = settings.startup['picker-iondicators-line'].value
 local ion_arrow = settings.startup['picker-iondicators-arrow'].value
 if ion_line ~= 'vanilla' then
     utility_sprites.indication_line.filename = '__PickerTweaks__/graphics/iondicators/indication-line.png'
-    utility_sprites.indication_line.tint = Color(Color.color[ion_line], 0.5)
+    utility_sprites.indication_line.tint = Color(Color.color[ion_line], 0.5) --[[@as Color]]
 end
 if ion_arrow ~= 'vanilla' then
     utility_sprites.indication_arrow.filename = '__PickerTweaks__/graphics/iondicators/indication-arrow.png'
-    utility_sprites.indication_arrow.tint = Color(Color.color[ion_arrow], 0.5)
+    utility_sprites.indication_arrow.tint = Color(Color.color[ion_arrow], 0.5) --[[@as Color]]
 end

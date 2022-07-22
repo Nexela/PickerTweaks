@@ -13,8 +13,9 @@ if settings.startup['picker-disable-smoke'].value then
         ['flame-thrower-explosion'] = true
     }
 
-    for _, raw_type in pairs(data.raw) do
-        for _, entity in pairs(raw_type) do
+    ---@alias PickerTweaks.Prototype.smokers Prototype.Generator|Prototype.BurnerGenerator
+    for _, raw_type in pairs(data.raw) --[[@as fun():any, PrototypeType]] do
+        for _, entity in pairs(raw_type) --[[@as fun(): any, PickerTweaks.Prototype.smokers]] do
             if entity.smoke then
                 if not type_ignores[entity.type] then
                     entity.smoke = nil
@@ -33,8 +34,9 @@ if settings.startup['picker-disable-smoke'].value then
                     count = count + 1
                 end
             end
-            if entity.type == 'locomotive' and entity.stop_trigger then
-                if entity.stop_trigger[3] then
+            if entity.type == 'locomotive' then
+                ---@cast entity Prototype.Locomotive
+                if entity.stop_trigger and entity.stop_trigger[3] then
                     count = count + 1
                     entity.stop_trigger = entity.stop_trigger[3]
                 end

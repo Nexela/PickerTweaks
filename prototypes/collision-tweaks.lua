@@ -24,7 +24,7 @@
     You should have received a copy of the GNU General Public License
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
 ]] --
-local Area = require('__stdlib__/stdlib/area/area')
+local Area = require('__stdlib__/stdlib/area/area') ---@type table
 
 local gap_requirements = {
     ['solar-panel'] = 0.25,
@@ -94,14 +94,16 @@ end
 -- Checks all existing prototypes listed in gap_requirements and
 -- reduces their collision box to make a gap large enough to walk though if it is not already.
 local function adjust_collision_boxes()
-    for prototype_type, required_gap in pairs(gap_requirements) do
-        for _, prototype in pairs(data.raw[prototype_type]) do
+    for prototype_type, required_gap in pairs(gap_requirements) --[[@as fun():PrototypeTypes.type, double]] do
+        local prototypes = data.raw[prototype_type] --[[@as PrototypeType]]
+        for _, prototype in pairs(prototypes) --[[@as fun(): any, Prototype.EntityWithHealth]] do
             if not prototype.ignore_squeak_through and
-                (prototype.collision_box and Area(prototype.collision_box):size() > 0) then
-                for y = 1, 2 do
-                    for x = 1, 2 do
-                        prototype.collision_box[x][y] = adjust_coordinate_to_form_gap(prototype.collision_box[x][y],
-                            required_gap)
+                (prototype.collision_box and Area(prototype.collision_box):size() > 0)
+            then
+                for xy = 1, 2 do
+                    for lt_rb = 1, 2 do
+                        local adjustment = adjust_coordinate_to_form_gap(prototype.collision_box[lt_rb][xy], required_gap)
+                        prototype.collision_box[lt_rb][xy] = adjustment ---@diagnostic disable-line: no-unknown
                     end
                 end
             end
@@ -110,3 +112,6 @@ local function adjust_collision_boxes()
 end
 
 if settings.startup['picker-squeak-through'].value then adjust_collision_boxes() end
+
+---@class Prototype
+---@field ignore_squeak_through boolean
